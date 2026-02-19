@@ -1,0 +1,43 @@
+
+> myexclusiverentals@0.1.0 lint
+> eslint
+
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/app/our-stays/page.tsx
+   35:159  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  133:32   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  137:46   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/about/AboutHero.tsx
+  43:372  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/about/MissionSection.tsx
+  21:36  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/contact/ContactForm.tsx
+  25:130  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/contact/ContactInfo.tsx
+  51:162  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  82:111  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  82:245  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/home/CTASection.tsx
+  2:10  warning  'Section' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/home/PropertyCard.tsx
+  3:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/home/PropertyGrid.tsx
+  4:10  warning  'Button' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/layout/Header.tsx
+  5:20  warning  'useEffect' is defined but never used      @typescript-eslint/no-unused-vars
+  8:10  warning  'MessageCircle' is defined but never used  @typescript-eslint/no-unused-vars
+  8:25  warning  'Phone' is defined but never used          @typescript-eslint/no-unused-vars
+
+/Users/admin/Documents/GitHub/myexclusiverentals/src/components/villa/VillaDetails.tsx
+  53:32  warning  'stats' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 16 problems (9 errors, 7 warnings)
+
