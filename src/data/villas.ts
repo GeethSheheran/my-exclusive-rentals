@@ -35,7 +35,7 @@ export interface VillaData {
         description: string;
         heroImage: string;
         mapEmbedUrl: string;
-        attractions: { name: string; distance: string }[];
+        attractions: { name: string; distance: string; image: string }[];
     };
     bookingLink: string;
 }
@@ -205,11 +205,11 @@ export const VILLAS: VillaData[] = [
             heroImage: '/beach-bliss/exterior-ocean-view.jpeg',
             mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.356368386987!2d81.18914385742943!3d8.683077661840388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbbe5102749c6b%3A0x998dacb0a42ea612!2sOceanfront%20Condominium%20-%20Nilaveli!5e0!3m2!1sen!2slk!4v1769942048691!5m2!1sen!2slk',
             attractions: [
-                { name: 'Pigeon Island', distance: '2 km' },
-                { name: 'Velgam Vehera', distance: '12 km' },
-                { name: 'Kanniya Hot Springs', distance: '14 km' },
-                { name: 'Trincomalee Town', distance: '14 km' },
-                { name: 'China Bay Airport', distance: '29 km' }
+                { name: 'Pigeon Island', distance: '2 km', image: 'https://www.beyondescapes.com/uploads/excursions/SPjXAgahKx72.jpg' },
+                { name: 'Velgam Vehera', distance: '12 km', image: 'https://www.lanka-excursions-holidays.com/uploads/4/0/2/1/40216937/velgam-vehera-pilimage-orig_orig.jpg' },
+                { name: 'Kanniya Hot Springs', distance: '14 km', image: 'https://www.trawell.in/admin/images/upload/685870930Kanniya_hot_springs.jpg' },
+                { name: 'Trincomalee Town', distance: '14 km', image: 'https://ik.imgkit.net/3vlqs5axxjf/external/http://images.ntmllc.com/v4/destination/Sri-Lanka/Trincomalee/220882_SCN_Trincomalee_iStock-1404688575_Z87E41.jpg?tr=w-1200%2Cfo-auto' },
+                { name: 'China Bay Airport', distance: '29 km', image: 'https://cdn.jetphotos.com/640/6/2803923_1697735054.jpg' }
             ]
         },
         bookingLink: '#contact'
@@ -404,10 +404,10 @@ export const VILLAS: VillaData[] = [
             heroImage: '/sandy-shores/exterior-3.jpeg',
             mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.356368386987!2d81.18914385742943!3d8.683077661840388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbbe5102749c6b%3A0x998dacb0a42ea612!2sOceanfront%20Condominium%20-%20Nilaveli!5e0!3m2!1sen!2slk!4v1769942048691!5m2!1sen!2slk',
             attractions: [
-                { name: 'Velgam Vehera', distance: '12 km' },
-                { name: 'Kanniya Hot Springs', distance: '14 km' },
-                { name: 'China Bay Airport', distance: '29 km' },
-                { name: 'Trincomalee', distance: '14 km' }
+                { name: 'Velgam Vehera', distance: '12 km', image: 'https://www.lanka-excursions-holidays.com/uploads/4/0/2/1/40216937/velgam-vehera-pilimage-orig_orig.jpg' },
+                { name: 'Kanniya Hot Springs', distance: '14 km', image: 'https://www.trawell.in/admin/images/upload/685870930Kanniya_hot_springs.jpg' },
+                { name: 'China Bay Airport', distance: '29 km', image: 'https://cdn.jetphotos.com/640/6/2803923_1697735054.jpg' },
+                { name: 'Trincomalee', distance: '14 km', image: 'https://digitaltravelcouple.com/wp-content/uploads/2021/08/trincomalee-places-to-visit-1.jpg' }
             ]
         },
         bookingLink: '#contact'
@@ -608,10 +608,10 @@ export const VILLAS: VillaData[] = [
             heroImage: '/luxury-penthouse/exterior-2.jpg',
             mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.356368386987!2d81.18914385742943!3d8.683077661840388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbbe5102749c6b%3A0x998dacb0a42ea612!2sOceanfront%20Condominium%20-%20Nilaveli!5e0!3m2!1sen!2slk!4v1769942048691!5m2!1sen!2slk',
             attractions: [
-                { name: 'Velgam Vehera', distance: '12 km' },
-                { name: 'Kanniya Hot Springs', distance: '14 km' },
-                { name: 'China Bay Airport', distance: '29 km' },
-                { name: 'Trincomalee', distance: '14 km' }
+                { name: 'Velgam Vehera', distance: '12 km', image: 'https://www.lanka-excursions-holidays.com/uploads/4/0/2/1/40216937/velgam-vehera-pilimage-orig_orig.jpg' },
+                { name: 'Kanniya Hot Springs', distance: '14 km', image: 'https://www.trawell.in/admin/images/upload/685870930Kanniya_hot_springs.jpg' },
+                { name: 'China Bay Airport', distance: '29 km', image: 'https://cdn.jetphotos.com/640/6/2803923_1697735054.jpg' },
+                { name: 'Trincomalee', distance: '14 km', image: 'https://digitaltravelcouple.com/wp-content/uploads/2021/08/trincomalee-places-to-visit-1.jpg' }
             ]
         },
         bookingLink: '#contact'
@@ -771,11 +771,11 @@ export const VILLAS: VillaData[] = [
             heroImage: '/hill-haven/exterior-3.jpg',
             mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31688.4!2d80.7673!3d6.9497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTYnNTkuMCJOIDgwwrA0NicwMi4wIkU!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk',
             attractions: [
-                { name: 'Victoria Park', distance: '3 km' },
-                { name: 'Gregory Lake', distance: '4 km' },
-                { name: 'Hakgala Botanical Garden', distance: '10 km' },
-                { name: 'Horton Plains', distance: '32 km' },
-                { name: 'Nuwara Eliya Golf Course', distance: '2 km' }
+                { name: 'Victoria Park', distance: '3 km', image: 'https://www.travelmapsrilanka.com/destinations/destinationimages/travel-tips-for-victoria-park.webp' },
+                { name: 'Gregory Lake', distance: '4 km', image: 'https://www.honeymoonguidesrilanka.com/wp-content/uploads/2024/08/Lake-Gregory-Park-1200x630-1.jpg' },
+                { name: 'Hakgala Botanical Garden', distance: '10 km', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG7a_H3MhCPBVyebA8y6S0cgZem7fTEbXXtg&s' },
+                { name: 'Horton Plains', distance: '32 km', image: 'https://digitaltravelcouple.com/wp-content/uploads/2020/01/worlds-end-horton-plains-1.jpg' },
+                { name: 'Nuwara Eliya Golf Course', distance: '2 km', image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/b9/06/61/golf-course.jpg?w=900&h=500&s=1' }
             ]
         },
         bookingLink: '#contact'
