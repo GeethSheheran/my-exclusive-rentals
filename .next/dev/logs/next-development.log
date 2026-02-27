@@ -1,0 +1,32 @@
+[00:00:05.746] Server  LOG     ✓ Ready in 5.1s
+[00:00:11.400] Server  LOG     ○ Compiling / ...
+[00:00:23.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:24.065] Browser WARN    Image with src "/er-logo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:24.065] Browser WARN    Image with src "/er-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.221] Browser WARN    Image with src "/sandy-shores-main.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.221] Browser WARN    Image with src "/Luxury-Penthouse-Home.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.221] Browser WARN    Image with src "/Beach-Bliss-Home.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.221] Browser WARN    Image with src "/hill-main.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.811] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:10:12.991] Server  LOG     ✓ Compiled in 531ms
+[00:10:18.627] Server  LOG     ✓ Compiled in 160ms
+[00:13:22.448] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:16:04.345] Server  LOG     ✓ Compiled in 231ms
+[00:20:24.814] Server  LOG     ✓ Compiled in 509ms
+[00:20:33.764] Server  LOG     ✓ Compiled in 73ms
+[00:20:38.741] Server  LOG     ✓ Compiled in 200ms
+[00:20:44.746] Server  LOG     ✓ Compiled in 50ms
+[00:21:05.933] Server  LOG     ✓ Compiled in 272ms
+[00:21:26.126] Server  LOG     ✓ Compiled in 145ms
+[00:22:03.255] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:23:32.077] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:33:19.936] Server  LOG     ✓ Compiled in 874ms
+[00:37:21.858] Browser WARN    Image with src "/hill-haven/living-room-1.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:37:24.887] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:37:26.377] Browser WARN    Image with src "/luxury-penthouse/living-room-1.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:37:27.800] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[00:38:26.333] Server  LOG     ✓ Compiled in 165ms
+[00:39:39.270] Server  LOG     ✓ Compiled in 226ms
+[01:18:45.044] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[01:19:22.206] Browser WARN    Image with src "/beach-bliss/living-room-main.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:19:34.296] Browser WARN    Image with src "/beach-bliss/exterior-ocean-view.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

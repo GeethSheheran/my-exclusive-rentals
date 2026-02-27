@@ -3,16 +3,14 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ContactHero } from '@/components/contact/ContactHero';
-import { ContactForm } from '@/components/contact/ContactForm';
-import { ContactInfo } from '@/components/contact/ContactInfo';
+import { ContactSection } from '@/components/contact/ContactSection';
 
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white">
             <Header />
             <ContactHero />
-            <ContactInfo />
-            <ContactForm />
+            <ContactSection />
             <Footer />
         </main>
     );
