@@ -54,3 +54,5 @@
 [00:08:23.653] Server  ERROR   ⨯ "upstream image response failed for" "https://cdn.lakpura.com/images/LK94009647-02-E.JPG" 403
 [00:08:38.477] Server  LOG     ✓ Compiled in 139ms
 [00:08:41.420] Browser WARN    Image with src "https://www.travelmapsrilanka.com/destinations/destinationimages/travel-tips-for-victoria-park.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:12:07.205] Server  LOG     ✓ Compiled in 732ms
+[02:53:16.362] Server  LOG     ✓ Compiled in 106ms

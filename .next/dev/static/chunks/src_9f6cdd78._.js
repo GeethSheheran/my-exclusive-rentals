@@ -2487,7 +2487,7 @@ function VillaLocation({ locationTitle, locationDescription, heroImage, mapEmbed
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        className: "bg-gold hover:bg-gold/90 text-white rounded-full px-10 py-6 text-sm uppercase tracking-widest border-none transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl",
+                                        className: "bg-gold hover:bg-white text-white hover:text-gold rounded-full px-10 py-6 text-sm uppercase tracking-widest border-2 border-gold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl",
                                         onClick: ()=>document.getElementById('contact')?.scrollIntoView({
                                                 behavior: 'smooth'
                                             }),

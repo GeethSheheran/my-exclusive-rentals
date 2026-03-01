@@ -82,7 +82,7 @@ export function VillaLocation({
                             </p>
 
                             <Button
-                                className="bg-gold hover:bg-gold/90 text-white rounded-full px-10 py-6 text-sm uppercase tracking-widest border-none transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl"
+                                className="bg-gold hover:bg-white text-white hover:text-gold rounded-full px-10 py-6 text-sm uppercase tracking-widest border-2 border-gold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl"
                                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                             >
                                 Reserve Now
