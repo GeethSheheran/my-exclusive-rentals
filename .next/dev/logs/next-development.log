@@ -56,3 +56,5 @@
 [00:08:41.420] Browser WARN    Image with src "https://www.travelmapsrilanka.com/destinations/destinationimages/travel-tips-for-victoria-park.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:12:07.205] Server  LOG     ✓ Compiled in 732ms
 [02:53:16.362] Server  LOG     ✓ Compiled in 106ms
+[42:20:51.245] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[42:21:13.858] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404

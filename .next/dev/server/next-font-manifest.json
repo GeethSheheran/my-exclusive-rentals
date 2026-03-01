@@ -1,5 +1,17 @@
 {
   "app": {
+    "[project]/src/app/about-us/page": [
+      "static/media/05c01535fa71f901-s.p.f0ad0280.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/src/app/contact/page": [
+      "static/media/05c01535fa71f901-s.p.f0ad0280.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
+    "[project]/src/app/page": [
+      "static/media/05c01535fa71f901-s.p.f0ad0280.woff2",
+      "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
+    ],
     "[project]/src/app/stays/[slug]/page": [
       "static/media/05c01535fa71f901-s.p.f0ad0280.woff2",
       "static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2"
