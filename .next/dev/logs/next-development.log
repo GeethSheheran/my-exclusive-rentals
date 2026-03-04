@@ -157,3 +157,18 @@ Import traces:
 [01:11:25.478] Browser WARN    Image with src "/hill-main.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [01:11:26.562] Browser WARN    Image with src "/luxury-penthouse/living-room-1.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [01:11:35.132] Browser WARN    Image with src "https://digitaltravelcouple.com/wp-content/uploads/2021/08/trincomalee-places-to-visit-1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:22:10.772] Server  LOG     ✓ Compiled in 1365ms
+[01:22:54.333] Server  LOG     ✓ Compiled in 158ms
+[01:23:00.074] Server  LOG     ✓ Compiled in 100ms
+[01:23:04.996] Server  LOG     ✓ Compiled in 66ms
+[01:23:10.069] Server  LOG     ✓ Compiled in 132ms
+[01:23:17.667] Server  LOG     ✓ Compiled in 77ms
+[01:23:43.346] Server  ERROR   ⨯ "upstream image response failed for" "https://myexclusiverentals.com/wp-content/uploads/2024/11/ER-logo_new-2-01.png" 404
+[01:24:43.539] Server  LOG     ✓ Compiled in 156ms
+[01:26:28.755] Server  LOG     ✓ Compiled in 637ms
+[01:26:46.456] Server  LOG     ✓ Compiled in 868ms
+[01:27:44.574] Server  LOG     ✓ Compiled in 1157ms
+[01:28:15.569] Server  LOG     ✓ Compiled in 558ms
+[01:28:22.397] Server  LOG     ✓ Compiled in 176ms
+[01:28:29.647] Server  LOG     ✓ Compiled in 480ms
+[01:28:32.846] Server  LOG     ✓ Compiled in 74ms

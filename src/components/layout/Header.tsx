@@ -69,13 +69,13 @@ export function Header() {
                 <div className={cn(
                     "relative flex items-center justify-between transition-all duration-500",
                     "bg-white/30 backdrop-blur-md border border-white/20 shadow-2xl shadow-dark/5",
-                    "rounded-full px-4 py-3 lg:px-6 lg:py-4",
+                    "rounded-full px-4 py-1.5 lg:px-6 lg:py-2",
                     isScrolled ? "w-[90%] lg:w-[70%] max-w-5xl" : "w-[95%] lg:w-[85%] max-w-7xl"
                 )}>
 
                     {/* Logo */}
                     <Link href="/" className="relative z-50 group">
-                        <div className="relative w-20 h-16 lg:w-32 lg:h-20 transition-transform duration-300 group-hover:scale-105">
+                        <div className="relative w-16 h-12 lg:w-28 lg:h-18 transition-transform duration-300 group-hover:scale-105">
                             <Image
                                 src="/er-logo.png"
                                 alt="Exclusive Rentals"
