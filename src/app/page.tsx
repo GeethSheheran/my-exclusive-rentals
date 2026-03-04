@@ -10,12 +10,20 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Hero />
-      <PropertyGrid />
-      <Features />
-      <Testimonials />
-      <CTASection />
-      <Footer />
+
+      {/* Sticky Hero Container */}
+      <div className="sticky top-0 h-screen z-0">
+        <Hero />
+      </div>
+
+      {/* Scrolling Content */}
+      <div className="relative z-10 bg-white">
+        <PropertyGrid />
+        <Features />
+        <Testimonials />
+        <CTASection />
+        <Footer />
+      </div>
     </main>
   );
 }

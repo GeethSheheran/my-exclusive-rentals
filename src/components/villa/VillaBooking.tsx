@@ -27,7 +27,10 @@ export function VillaBooking({ villaName }: VillaBookingProps) {
 
                     {/* CTA Button */}
                     <Link href="/contact">
-                        <Button variant="solid">
+                        <Button
+                            variant="solid"
+                            className="rounded-full px-10 py-6 text-sm uppercase tracking-widest shadow-xl"
+                        >
                             Reserve Now
                         </Button>
                     </Link>

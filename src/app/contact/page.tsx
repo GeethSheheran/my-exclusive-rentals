@@ -7,11 +7,19 @@ import { ContactSection } from '@/components/contact/ContactSection';
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen">
             <Header />
-            <ContactHero />
-            <ContactSection />
-            <Footer />
+
+            {/* Sticky Hero Container */}
+            <div className="sticky top-0 h-[70vh] z-0">
+                <ContactHero />
+            </div>
+
+            {/* Scrolling Content */}
+            <div className="relative z-10">
+                <ContactSection />
+                <Footer />
+            </div>
         </main>
     );
 }

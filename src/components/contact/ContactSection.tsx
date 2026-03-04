@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 
 export function ContactSection() {
     return (
-        <section className="py-24 md:py-32 bg-floral-white relative overflow-hidden">
+        <section className="py-24 md:py-32 bg-white relative overflow-hidden">
             {/* Elegant Gold Line Accent */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gold" />
 
@@ -36,7 +36,7 @@ export function ContactSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="bg-soft-gray border border-dark/5 p-8 md:p-12 divide-y divide-dark/10"
+                            className="bg-white border border-dark/5 p-8 md:p-12 divide-y divide-dark/10"
                         >
                             {/* Email Section */}
                             <div className="pb-12 group">
@@ -87,7 +87,7 @@ export function ContactSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="bg-soft-gray p-8 md:p-12 border border-dark/5"
+                            className="bg-white p-8 md:p-12 border border-dark/5"
                         >
                             <div className="mb-10">
                                 <span className="font-sans text-gold text-xs uppercase tracking-[0.3em] mb-4 block">Inquiries</span>

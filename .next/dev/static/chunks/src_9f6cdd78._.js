@@ -1625,192 +1625,403 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bed$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/bed.js [app-client] (ecmascript) <export default as Bed>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sofa$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sofa$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sofa.js [app-client] (ecmascript) <export default as Sofa>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$utensils$2d$crossed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UtensilsCrossed$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/utensils-crossed.js [app-client] (ecmascript) <export default as UtensilsCrossed>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$scaling$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Scaling$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/scaling.js [app-client] (ecmascript) <export default as Scaling>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bed$2d$double$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BedDouble$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/bed-double.js [app-client] (ecmascript) <export default as BedDouble>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$armchair$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Armchair$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/armchair.js [app-client] (ecmascript) <export default as Armchair>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wifi$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wifi$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/wifi.js [app-client] (ecmascript) <export default as Wifi>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mountain$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mountain$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mountain.js [app-client] (ecmascript) <export default as Mountain>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$concierge$2d$bell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ConciergeBell$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/concierge-bell.js [app-client] (ecmascript) <export default as ConciergeBell>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$key$2d$round$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__KeyRound$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/key-round.js [app-client] (ecmascript) <export default as KeyRound>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$utensils$2d$crossed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UtensilsCrossed$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/utensils-crossed.js [app-client] (ecmascript) <export default as UtensilsCrossed>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 'use client';
 ;
 ;
-const DetailCard = ({ icon: Icon, title, items, className = "" })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `bg-soft-gray p-10 flex flex-col items-start min-h-[280px] hover:bg-gold-light/30 transition-colors duration-500 group ${className}`,
+;
+const StatItem = ({ icon: Icon, title, detail, items })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex gap-6 items-start",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-gold mb-6",
+                className: "p-3 bg-floral-white rounded-xl border border-gold/10 text-gold shrink-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                    size: 36,
-                    strokeWidth: 1
+                    size: 28,
+                    strokeWidth: 1.5
                 }, void 0, false, {
                     fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                    lineNumber: 38,
+                    lineNumber: 29,
                     columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                lineNumber: 37,
+                lineNumber: 28,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "font-serif text-2xl text-gold mb-6",
-                children: title
-            }, void 0, false, {
-                fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                lineNumber: 40,
-                columnNumber: 9
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "space-y-3",
-                children: items.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "font-sans text-dark/60 font-light text-sm leading-relaxed",
-                        children: item
-                    }, idx, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                        className: "font-serif text-xl text-dark mb-2 tracking-tight",
+                        children: title
+                    }, void 0, false, {
                         fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                        lineNumber: 45,
+                        lineNumber: 32,
+                        columnNumber: 13
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    detail && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "font-sans text-dark/40 text-sm font-light uppercase tracking-wider",
+                        children: detail
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                        lineNumber: 33,
+                        columnNumber: 24
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    items && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "space-y-1 mt-1",
+                        children: items.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                className: "font-sans text-dark/60 text-sm font-light leading-relaxed flex items-start gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-gold/60 mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                        lineNumber: 38,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    item
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 37,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                        lineNumber: 35,
                         columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)))
-            }, void 0, false, {
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                lineNumber: 43,
+                lineNumber: 31,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/villa/VillaDetails.tsx",
-        lineNumber: 36,
+        lineNumber: 27,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
-_c = DetailCard;
-function VillaDetails({ rooms, amenities }) {
+_c = StatItem;
+const AmenityItem = ({ title, icon: Icon, detail, items })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex gap-8 items-start mb-12 last:mb-0",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-gold shrink-0 mt-1",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                    size: 48,
+                    strokeWidth: 1
+                }, void 0, false, {
+                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                    lineNumber: 51,
+                    columnNumber: 13
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                lineNumber: 50,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                        className: "font-serif text-2xl text-dark mb-3 tracking-tight",
+                        children: title
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                        lineNumber: 54,
+                        columnNumber: 13
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    detail && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "font-sans text-dark/40 text-base font-light leading-relaxed",
+                        children: detail
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                        lineNumber: 55,
+                        columnNumber: 24
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    items && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "space-y-2.5 mt-4",
+                        children: items.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                className: "font-sans text-dark/60 text-[15px] font-light leading-relaxed flex items-start gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-gold/40 mt-1.5 h-1 w-1 rounded-full bg-gold shrink-0"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                        lineNumber: 60,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    item
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 59,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                        lineNumber: 57,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                lineNumber: 53,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/villa/VillaDetails.tsx",
+        lineNumber: 49,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+_c1 = AmenityItem;
+function VillaDetails({ stats, rooms, amenities }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "bg-floral-white py-20 md:py-24",
+        className: "bg-white py-24 md:py-32 overflow-hidden",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container mx-auto px-4",
+            className: "container mx-auto px-4 max-w-6xl",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center max-w-4xl mx-auto mb-20 md:mb-28",
+                    className: "grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 mb-20",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-gold font-sans text-xs tracking-[0.4em] uppercase font-bold mb-6 block",
-                            children: "The Experience"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatItem, {
+                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bed$3e$__["Bed"],
+                                title: "Sleeps",
+                                detail: `Maximum ${stats.sleeps} persons`
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 83,
+                                columnNumber: 25
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 60,
+                            lineNumber: 77,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "font-serif text-6xl md:text-7xl text-dark mb-8 leading-none",
-                            children: "Details & Amenities"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8,
+                                delay: 0.1
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatItem, {
+                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$scaling$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Scaling$3e$__["Scaling"],
+                                title: "Floor Area",
+                                detail: `${stats.floorArea} SQ Meters`
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 96,
+                                columnNumber: 25
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 63,
+                            lineNumber: 90,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "font-sans text-dark/50 tracking-tight font-light text-lg md:text-xl leading-relaxed max-w-xl mx-auto",
-                            children: "Every detail has been thoughtfully curated for your comfort and convenience."
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8,
+                                delay: 0.2
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatItem, {
+                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bed$2d$double$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BedDouble$3e$__["BedDouble"],
+                                title: "Bedrooms",
+                                items: rooms.bedrooms
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 109,
+                                columnNumber: 25
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 66,
+                            lineNumber: 103,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8,
+                                delay: 0.3
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatItem, {
+                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$armchair$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Armchair$3e$__["Armchair"],
+                                title: "Living & Dining",
+                                items: rooms.livingDining
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                lineNumber: 122,
+                                columnNumber: 25
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                            lineNumber: 116,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                    lineNumber: 59,
+                    lineNumber: 76,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "border border-gray-200 bg-gray-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px]",
+                    className: "w-full h-px bg-dark/5 mb-24"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                    lineNumber: 131,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-16",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bed$3e$__["Bed"],
-                            title: "Bedrooms",
-                            items: rooms.bedrooms
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-serif text-5xl text-dark mb-16 tracking-tight",
+                                    children: "Amenities"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                    lineNumber: 136,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AmenityItem, {
+                                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wifi$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wifi$3e$__["Wifi"],
+                                    title: "Internet",
+                                    detail: amenities.internet[0]
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                    lineNumber: 138,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AmenityItem, {
+                                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$utensils$2d$crossed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UtensilsCrossed$3e$__["UtensilsCrossed"],
+                                    title: "Kitchen",
+                                    items: amenities.kitchen
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                    lineNumber: 144,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 74,
+                            lineNumber: 135,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sofa$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sofa$3e$__["Sofa"],
-                            title: "Living & Dining",
-                            items: rooms.livingDining
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-serif text-5xl text-dark mb-16 tracking-tight",
+                                    children: "Other Amenities"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                    lineNumber: 153,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    className: "space-y-4",
+                                    children: amenities.services.map((service, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            className: "font-sans text-dark/60 text-base font-light flex items-start gap-4 leading-relaxed group",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-gold/40 mt-1.5 h-1 w-1 rounded-full bg-gold shrink-0 group-hover:scale-125 transition-transform"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 37
+                                                }, this),
+                                                service
+                                            ]
+                                        }, idx, true, {
+                                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                            lineNumber: 157,
+                                            columnNumber: 33
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaDetails.tsx",
+                                    lineNumber: 155,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 80,
+                            lineNumber: 152,
                             columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wifi$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wifi$3e$__["Wifi"],
-                            title: "Internet",
-                            items: amenities.internet
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 86,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$utensils$2d$crossed$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UtensilsCrossed$3e$__["UtensilsCrossed"],
-                            title: "Kitchen",
-                            items: amenities.kitchen,
-                            className: "lg:col-span-2"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 92,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mountain$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mountain$3e$__["Mountain"],
-                            title: "Balcony",
-                            items: amenities.features
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 99,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$concierge$2d$bell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ConciergeBell$3e$__["ConciergeBell"],
-                            title: "Other Amenities",
-                            items: amenities.services,
-                            className: "lg:col-span-2"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 105,
-                            columnNumber: 21
-                        }, this),
-                        amenities.entry.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailCard, {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$key$2d$round$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__KeyRound$3e$__["KeyRound"],
-                            title: "Entry to Apartment",
-                            items: amenities.entry
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                            lineNumber: 113,
-                            columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/villa/VillaDetails.tsx",
-                    lineNumber: 72,
+                    lineNumber: 133,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/villa/VillaDetails.tsx",
-            lineNumber: 56,
+            lineNumber: 73,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/villa/VillaDetails.tsx",
-        lineNumber: 55,
+        lineNumber: 72,
         columnNumber: 9
     }, this);
 }
-_c1 = VillaDetails;
-var _c, _c1;
-__turbopack_context__.k.register(_c, "DetailCard");
-__turbopack_context__.k.register(_c1, "VillaDetails");
+_c2 = VillaDetails;
+var _c, _c1, _c2;
+__turbopack_context__.k.register(_c, "StatItem");
+__turbopack_context__.k.register(_c1, "AmenityItem");
+__turbopack_context__.k.register(_c2, "VillaDetails");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -2353,172 +2564,143 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/map-pin.js [app-client] (ecmascript) <export default as MapPin>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$motion$2d$value$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-motion-value.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$spring$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-spring.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Button.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
-;
-;
 function VillaLocation({ locationTitle, locationDescription, heroImage, mapEmbedUrl, attractions }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "bg-floral-white overflow-hidden",
+        className: "bg-white py-24 md:py-32",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "grid grid-cols-1 lg:grid-cols-2 min-h-screen",
+            className: "container mx-auto px-4 max-w-7xl",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative overflow-hidden",
+                    className: "text-center mb-16 md:mb-20",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "font-serif text-5xl md:text-6xl text-dark tracking-tight",
+                        children: "Location and Attractions"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                        lineNumber: 34,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                    lineNumber: 33,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative w-full h-[500px] md:h-[600px] mb-24 rounded-sm overflow-hidden group",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                             initial: {
-                                scale: 1
-                            },
-                            animate: {
                                 scale: 1.1
                             },
+                            whileInView: {
+                                scale: 1
+                            },
+                            viewport: {
+                                once: true
+                            },
                             transition: {
-                                duration: 20,
-                                repeat: Infinity,
-                                repeatType: "reverse",
-                                ease: "easeInOut"
+                                duration: 1.5,
+                                ease: "easeOut"
                             },
                             className: "absolute inset-0",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 src: heroImage,
-                                alt: "Location",
+                                alt: "Location View",
                                 fill: true,
                                 className: "object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                lineNumber: 49,
+                                lineNumber: 48,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 38,
+                            lineNumber: 41,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-0 bg-black/40"
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                x: -30
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                x: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8,
+                                delay: 0.3
+                            },
+                            className: "absolute bottom-0 left-0 md:bottom-12 md:left-12 bg-white p-8 md:p-14 max-w-xl shadow-2xl z-10",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-serif text-3xl md:text-4xl text-dark mb-6 tracking-tight",
+                                    children: locationTitle
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                    lineNumber: 64,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "font-sans text-dark/60 font-light leading-relaxed mb-8 text-base md:text-lg",
+                                    children: locationDescription
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                    lineNumber: 67,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>document.getElementById('contact')?.scrollIntoView({
+                                            behavior: 'smooth'
+                                        }),
+                                    className: "font-sans text-xs tracking-[0.3em] uppercase font-bold text-dark hover:text-gold transition-colors flex items-center gap-2 group/btn",
+                                    children: [
+                                        "Visit Now ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-lg group-hover/btn:translate-x-1 transition-transform",
+                                            children: "+"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 74,
+                                            columnNumber: 39
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                    lineNumber: 70,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 58,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 59,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative z-10 flex flex-col justify-end h-full p-10 md:p-16 lg:p-20 min-h-[70vh] lg:min-h-screen",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0,
-                                    y: 30
-                                },
-                                whileInView: {
-                                    opacity: 1,
-                                    y: 0
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                transition: {
-                                    duration: 0.8
-                                },
-                                className: "max-w-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-gold font-sans text-xs tracking-[0.4em] uppercase font-bold mb-6 block",
-                                        children: "Explore The Area"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 70,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-[1.1]",
-                                        children: [
-                                            "Location &",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                                lineNumber: 74,
-                                                columnNumber: 43
-                                            }, this),
-                                            "Attractions"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 73,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-20 h-px bg-gold mb-8"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 76,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-serif text-2xl md:text-3xl text-white/95 mb-6",
-                                        children: locationTitle
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 77,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-sans text-white/70 font-light leading-relaxed text-lg mb-12",
-                                        children: locationDescription
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 80,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        className: "bg-gold hover:bg-white text-white hover:text-gold rounded-full px-10 py-6 text-sm uppercase tracking-widest border-2 border-gold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl",
-                                        onClick: ()=>document.getElementById('contact')?.scrollIntoView({
-                                                behavior: 'smooth'
-                                            }),
-                                        children: "Reserve Now"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                        lineNumber: 84,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                lineNumber: 63,
-                                columnNumber: 25
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 62,
+                            lineNumber: 57,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                    lineNumber: 36,
+                    lineNumber: 40,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex flex-col relative",
+                    className: "grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative h-[45vh] lg:h-[55%]",
+                            className: "w-full aspect-video md:aspect-[4/3] rounded-sm overflow-hidden shadow-sm relative grayscale hover:grayscale-0 transition-all duration-700",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
                                 src: mapEmbedUrl,
                                 width: "100%",
@@ -2529,93 +2711,112 @@ function VillaLocation({ locationTitle, locationDescription, heroImage, mapEmbed
                                 allowFullScreen: true,
                                 loading: "lazy",
                                 referrerPolicy: "no-referrer-when-downgrade",
-                                className: "absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                                className: "absolute inset-0"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                lineNumber: 98,
+                                lineNumber: 83,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 97,
+                            lineNumber: 82,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-floral-white flex-1 p-10 md:p-16",
+                            className: "text-center md:text-left",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-4 mb-10",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-10 h-10 rounded-full border border-gold/50 flex items-center justify-center",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"], {
-                                                size: 18,
-                                                className: "text-gold",
-                                                strokeWidth: 1.5
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                                lineNumber: 114,
-                                                columnNumber: 33
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                            lineNumber: 113,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-serif text-2xl text-dark",
-                                            children: "Nearby Attractions"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                            lineNumber: 116,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-serif text-4xl text-dark mb-8 tracking-tight",
+                                    children: "Nearby Attractions"
+                                }, void 0, false, {
                                     fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 97,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "space-y-0 relative",
-                                    children: attractions.map((attraction, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AttractionItem, {
-                                            attraction: attraction
-                                        }, idx, false, {
+                                    className: "font-sans text-dark/50 font-light leading-[2] text-lg md:text-xl max-w-2xl mx-auto md:mx-0",
+                                    children: [
+                                        "Nearby attractions include the serene ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverAttraction, {
+                                            attraction: attractions.find((a)=>a.name.includes("Velgam")) || attractions[1]
+                                        }, void 0, false, {
                                             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                            lineNumber: 123,
-                                            columnNumber: 33
-                                        }, this))
-                                }, void 0, false, {
+                                            lineNumber: 101,
+                                            columnNumber: 67
+                                        }, this),
+                                        ", and the famous ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverAttraction, {
+                                            attraction: attractions.find((a)=>a.name.includes("Kanniya")) || attractions[2]
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 102,
+                                            columnNumber: 44
+                                        }, this),
+                                        ".",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverAttraction, {
+                                            attraction: attractions.find((a)=>a.name.includes("China Bay")) || attractions[4]
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 103,
+                                            columnNumber: 29
+                                        }, this),
+                                        " is conveniently situated ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "29 kms"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 103,
+                                            columnNumber: 157
+                                        }, this),
+                                        " away, while the bustling town of ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverAttraction, {
+                                            attraction: attractions.find((a)=>a.name.includes("Trincomalee")) || attractions[3]
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 104,
+                                            columnNumber: 56
+                                        }, this),
+                                        " is a short ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "14 km"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/villa/VillaLocation.tsx",
+                                            lineNumber: 104,
+                                            columnNumber: 172
+                                        }, this),
+                                        " drive."
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 100,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                            lineNumber: 111,
+                            lineNumber: 96,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                    lineNumber: 95,
+                    lineNumber: 80,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/villa/VillaLocation.tsx",
-            lineNumber: 33,
+            lineNumber: 30,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/villa/VillaLocation.tsx",
-        lineNumber: 31,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
 _c = VillaLocation;
-function AttractionItem({ attraction }) {
+function HoverAttraction({ attraction }) {
     _s();
     const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -2633,36 +2834,30 @@ function AttractionItem({ attraction }) {
         mouseX.set(e.clientX - rect.left);
         mouseY.set(e.clientY - rect.top);
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    if (!attraction) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
         ref: containerRef,
         onMouseEnter: ()=>setIsHovered(true),
         onMouseLeave: ()=>setIsHovered(false),
         onMouseMove: handleMouseMove,
-        className: "flex items-center justify-between py-6 border-b border-dark/10 group hover:border-gold/50 transition-colors duration-300 relative cursor-pointer",
+        className: "relative inline-block",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "font-sans text-dark/70 font-light text-xl group-hover:text-dark transition-colors duration-300",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                className: "text-dark cursor-help border-b border-gold/30 hover:border-gold transition-colors",
                 children: attraction.name
             }, void 0, false, {
                 fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                lineNumber: 159,
+                lineNumber: 141,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "font-sans text-gold font-medium tracking-widest text-sm",
-                children: attraction.distance
-            }, void 0, false, {
-                fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                lineNumber: 162,
-                columnNumber: 13
-            }, this),
+            attraction.name.includes("Velgam") || attraction.name.includes("Kanniya") ? `, just ${attraction.distance} away` : "",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                 children: isHovered && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     style: {
                         x,
                         y,
                         translateX: '10%',
-                        translateY: '-50%'
+                        translateY: '-110%'
                     },
                     initial: {
                         opacity: 0,
@@ -2690,27 +2885,27 @@ function AttractionItem({ attraction }) {
                         className: "object-cover"
                     }, void 0, false, {
                         fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                        lineNumber: 182,
+                        lineNumber: 161,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                    lineNumber: 169,
+                    lineNumber: 148,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/villa/VillaLocation.tsx",
-                lineNumber: 167,
+                lineNumber: 146,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/villa/VillaLocation.tsx",
-        lineNumber: 152,
+        lineNumber: 134,
         columnNumber: 9
     }, this);
 }
-_s(AttractionItem, "apsefvG7wb2V+BqihhFPUweU5L4=", false, function() {
+_s(HoverAttraction, "apsefvG7wb2V+BqihhFPUweU5L4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$motion$2d$value$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMotionValue"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$motion$2d$value$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMotionValue"],
@@ -2718,10 +2913,10 @@ _s(AttractionItem, "apsefvG7wb2V+BqihhFPUweU5L4=", false, function() {
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$spring$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSpring"]
     ];
 });
-_c1 = AttractionItem;
+_c1 = HoverAttraction;
 var _c, _c1;
 __turbopack_context__.k.register(_c, "VillaLocation");
-__turbopack_context__.k.register(_c1, "AttractionItem");
+__turbopack_context__.k.register(_c1, "HoverAttraction");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -2785,6 +2980,7 @@ function VillaBooking({ villaName }) {
                         href: "/contact",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                             variant: "solid",
+                            className: "rounded-full px-10 py-6 text-sm uppercase tracking-widest shadow-xl",
                             children: "Reserve Now"
                         }, void 0, false, {
                             fileName: "[project]/src/components/villa/VillaBooking.tsx",

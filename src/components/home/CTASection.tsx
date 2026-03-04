@@ -1,22 +1,49 @@
-import { Button } from '@/components/ui/Button';
+'use client';
 
+import { useRef } from 'react';
+import { Button } from '@/components/ui/Button';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export function CTASection() {
-    return (
-        <section className="py-20 md:py-24 bg-floral-white relative overflow-hidden">
-            {/* Abstract Background Element */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-floral-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+    const sectionRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "end start"]
+    });
 
-            <div className="container relative z-10 text-center">
-                <h2 className="font-serif text-5xl md:text-7xl font-light text-dark mb-8">
-                    Your Dream Stay <span className="text-gold ">Awaits</span>
-                </h2>
-                <p className="text-dark/90 text-xl tracking-wide font-thin font-sans mb-12 max-w-2xl mx-auto">
-                    Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli.
-                </p>
-                <Button variant="solid" className="lg:flex mx-auto rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5">
-                    Enquire Now
-                </Button>
+    const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+
+    return (
+        <section ref={sectionRef} className="relative h-[600px] flex items-center overflow-hidden">
+            {/* Background Image Container with Parallax */}
+            <motion.div
+                className="absolute inset-x-0 -top-[50%] -bottom-[50%] z-0"
+                style={{
+                    backgroundImage: 'url("/Hero-Image-6-1.jpg")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    y
+                }}
+            >
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-black/10" />
+            </motion.div>
+
+            <div className="container relative z-10">
+                <div className="max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm">
+                    <h2 className="font-serif text-4xl md:text-5xl font-light text-dark mb-6 leading-tight">
+                        Your Dream Stay Awaits!
+                    </h2>
+                    <p className="text-dark/80 text-lg leading-relaxed font-sans mb-10">
+                        Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli and Upcot Maskeliya.
+                    </p>
+                    <Button
+                        variant="outline"
+                        className="rounded-full border-dark/20 text-dark hover:bg-dark hover:text-white px-10 py-4 text-sm font-bold tracking-widest transition-all duration-500 uppercase"
+                    >
+                        Enquire Now
+                    </Button>
+                </div>
             </div>
         </section>
     );

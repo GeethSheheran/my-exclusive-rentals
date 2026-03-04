@@ -278,57 +278,66 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$B
 ;
 function CTASection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-20 md:py-24 bg-floral-white relative overflow-hidden",
+        className: "relative h-[600px] flex items-center overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-0 right-0 w-[500px] h-[500px] bg-floral-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+                className: "absolute inset-0 z-0",
+                style: {
+                    backgroundImage: 'url("/Hero-Image-6-1.jpg")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center 60%'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute inset-0 bg-black/10"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/home/CTASection.tsx",
+                    lineNumber: 17,
+                    columnNumber: 17
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
                 lineNumber: 8,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container relative z-10 text-center",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "font-serif text-5xl md:text-7xl font-light text-dark mb-8",
-                        children: [
-                            "Your Dream Stay ",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-gold ",
-                                children: "Awaits"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/home/CTASection.tsx",
-                                lineNumber: 12,
-                                columnNumber: 37
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/home/CTASection.tsx",
-                        lineNumber: 11,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-dark/90 text-xl tracking-wide font-thin font-sans mb-12 max-w-2xl mx-auto",
-                        children: "Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli."
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/home/CTASection.tsx",
-                        lineNumber: 14,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
-                        variant: "solid",
-                        className: "lg:flex mx-auto rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5",
-                        children: "Enquire Now"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/home/CTASection.tsx",
-                        lineNumber: 17,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+                className: "container relative z-10",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "font-serif text-4xl md:text-5xl font-light text-dark mb-6 leading-tight",
+                            children: "Your Dream Stay Awaits!"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/home/CTASection.tsx",
+                            lineNumber: 22,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-dark/80 text-lg leading-relaxed font-sans mb-10",
+                            children: "Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli and Upcot Maskeliya."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/home/CTASection.tsx",
+                            lineNumber: 25,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
+                            variant: "outline",
+                            className: "rounded-[100px] border-dark/20 text-dark hover:bg-dark hover:text-white px-10 py-4 text-sm font-bold tracking-widest transition-all duration-500 uppercase",
+                            children: "Enquire Now"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/home/CTASection.tsx",
+                            lineNumber: 28,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/home/CTASection.tsx",
+                    lineNumber: 21,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
-                lineNumber: 10,
+                lineNumber: 20,
                 columnNumber: 13
             }, this)
         ]
