@@ -4,3 +4,9 @@
 [00:00:07.778] Browser WARN    Image with src "/er-logo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:00:07.778] Browser WARN    Image with src "/er-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:04:09.422] Server  LOG     ✓ Compiled in 1466ms
+[00:09:28.878] Browser WARN    Image with src "/sandy-shores-main.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:29.804] Browser WARN    Image with src "/Beach-Bliss-Home.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:29.804] Browser WARN    Image with src "/Luxury-Penthouse-Home.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:29.805] Browser WARN    Image with src "/hill-main.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:09:31.461] Server  LOG     ○ Compiling /stays/[slug] ...
+[00:09:48.974] Browser WARN    Image with src "/beach-bliss/living-room-main.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
