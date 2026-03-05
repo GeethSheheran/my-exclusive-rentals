@@ -9,13 +9,25 @@ export function ContactHero() {
 
             {/* Full Background Image */}
             <div className="absolute inset-0">
-                <Image
-                    src="/contacthero.webp"
-                    alt="Contact Hero"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <motion.div
+                    animate={{
+                        scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/sandy-shores/exterior-2.jpg"
+                        alt="Contact Hero"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </motion.div>
                 {/* Gradient Overlay - Dark from bottom */}
                 <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/40 to-transparent" />
                 {/* Additional subtle overlay */}

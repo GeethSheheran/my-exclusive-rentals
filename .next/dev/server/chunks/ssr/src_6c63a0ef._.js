@@ -998,12 +998,31 @@ function ContactHero() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        src: "/contacthero.webp",
-                        alt: "Contact Hero",
-                        fill: true,
-                        className: "object-cover",
-                        priority: true
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            scale: [
+                                1,
+                                1.1,
+                                1
+                            ]
+                        },
+                        transition: {
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: "linear"
+                        },
+                        className: "absolute inset-0",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/sandy-shores/exterior-2.jpg",
+                            alt: "Contact Hero",
+                            fill: true,
+                            className: "object-cover",
+                            priority: true
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/contact/ContactHero.tsx",
+                            lineNumber: 23,
+                            columnNumber: 21
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/contact/ContactHero.tsx",
                         lineNumber: 12,
@@ -1013,14 +1032,14 @@ function ContactHero() {
                         className: "absolute inset-0 bg-gradient-to-r from-dark via-dark/40 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/src/components/contact/ContactHero.tsx",
-                        lineNumber: 20,
+                        lineNumber: 32,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-dark/20"
                     }, void 0, false, {
                         fileName: "[project]/src/components/contact/ContactHero.tsx",
-                        lineNumber: 22,
+                        lineNumber: 34,
                         columnNumber: 17
                     }, this)
                 ]
@@ -1051,7 +1070,7 @@ function ContactHero() {
                                 className: "h-px bg-gold mb-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                                lineNumber: 31,
+                                lineNumber: 43,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
@@ -1071,7 +1090,7 @@ function ContactHero() {
                                 children: "Get in Touch"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                                lineNumber: 39,
+                                lineNumber: 51,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h1, {
@@ -1095,13 +1114,13 @@ function ContactHero() {
                                         children: " Us"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/contact/ContactHero.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 68,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                                lineNumber: 49,
+                                lineNumber: 61,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1121,23 +1140,23 @@ function ContactHero() {
                                 children: "Plan your perfect escape with Exclusive Rentals."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                                lineNumber: 60,
+                                lineNumber: 72,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/contact/ContactHero.tsx",
-                        lineNumber: 29,
+                        lineNumber: 41,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/contact/ContactHero.tsx",
-                    lineNumber: 27,
+                    lineNumber: 39,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                lineNumber: 26,
+                lineNumber: 38,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1156,19 +1175,19 @@ function ContactHero() {
                     className: "w-24 h-24 border border-white/10"
                 }, void 0, false, {
                     fileName: "[project]/src/components/contact/ContactHero.tsx",
-                    lineNumber: 75,
+                    lineNumber: 87,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                lineNumber: 74,
+                lineNumber: 86,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute bottom-0 left-0 right-0 h-px bg-gold z-10"
             }, void 0, false, {
                 fileName: "[project]/src/components/contact/ContactHero.tsx",
-                lineNumber: 84,
+                lineNumber: 96,
                 columnNumber: 13
             }, this)
         ]

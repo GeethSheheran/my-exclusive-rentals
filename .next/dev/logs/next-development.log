@@ -172,3 +172,10 @@ Import traces:
 [01:28:22.397] Server  LOG     ✓ Compiled in 176ms
 [01:28:29.647] Server  LOG     ✓ Compiled in 480ms
 [01:28:32.846] Server  LOG     ✓ Compiled in 74ms
+[02:37:20.607] Browser WARN    Image with src "/beach-bliss/living-room-main.jpg" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:37:31.309] Browser WARN    Image with src "https://ik.imgkit.net/3vlqs5axxjf/external/http://images.ntmllc.com/v4/destination/Sri-Lanka/Trincomalee/220882_SCN_Trincomalee_iStock-1404688575_Z87E41.jpg?tr=w-1200%2Cfo-auto" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:37:31.944] Browser WARN    Image with src "https://www.trawell.in/admin/images/upload/685870930Kanniya_hot_springs.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:37:32.487] Browser WARN    Image with src "https://www.lanka-excursions-holidays.com/uploads/4/0/2/1/40216937/velgam-vehera-pilimage-orig_orig.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:37:33.162] Browser WARN    Image with src "https://cdn.jetphotos.com/640/6/2803923_1697735054.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[25:44:28.850] Server  LOG     ✓ Compiled in 694ms
+[25:45:26.155] Server  LOG     ✓ Compiled in 183ms
