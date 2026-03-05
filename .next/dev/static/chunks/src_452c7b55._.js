@@ -2069,13 +2069,103 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-scroll.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-transform.mjs [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
-function CTASection() {
+const HOVER_IMAGES = [
+    // beach-bliss
+    "/beach-bliss/pool-main.jpg",
+    "/beach-bliss/living-room-main.jpg",
+    "/beach-bliss/master-bedroom-main.jpg",
+    "/beach-bliss/exterior-architecture.jpg",
+    "/beach-bliss/dining-table.jpg",
+    "/beach-bliss/pool-deck.jpg",
+    // hill-haven
+    "/hill-haven/exterior-1.jpg",
+    "/hill-haven/living-room-1.jpg",
+    "/hill-haven/master-bedroom-1.jpg",
+    "/hill-haven/patio-1.jpg",
+    "/hill-haven/dining-1.jpg",
+    "/hill-haven/exterior-2.jpg",
+    // luxury-penthouse
+    "/luxury-penthouse/living-room-1.jpg",
+    "/luxury-penthouse/pool-1.jpg",
+    "/luxury-penthouse/master-bedroom-1.jpg",
+    "/luxury-penthouse/jacuzzi-1.jpg",
+    "/luxury-penthouse/exterior-1.jpg",
+    "/luxury-penthouse/balcony-1.jpg",
+    // sandy-shores
+    "/sandy-shores/living-room-1.jpg",
+    "/sandy-shores/exterior-2.jpg",
+    "/sandy-shores/master-bedroom-1.jpg",
+    "/sandy-shores/pool-1.jpg",
+    "/sandy-shores/kitchen-1.jpg",
+    "/sandy-shores/bedroom-1-main.jpg",
+    // more variety
+    "/beach-bliss/exterior-night.jpg",
+    "/hill-haven/patio-3.jpg",
+    "/luxury-penthouse/gym-1.jpg",
+    "/sandy-shores/gym-1.jpg"
+];
+function HoverGrid() {
     _s();
+    const columns = 12;
+    const rows = 6;
+    const totalCells = columns * rows;
+    const cells = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "HoverGrid.useMemo[cells]": ()=>{
+            return Array.from({
+                length: totalCells
+            }).map({
+                "HoverGrid.useMemo[cells]": (_, i)=>({
+                        id: i,
+                        img: HOVER_IMAGES[i % HOVER_IMAGES.length]
+                    })
+            }["HoverGrid.useMemo[cells]"]);
+        }
+    }["HoverGrid.useMemo[cells]"], [
+        totalCells
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "absolute inset-0 grid grid-cols-6 md:grid-cols-12 grid-rows-6 pointer-events-auto",
+        children: cells.map((cell)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                className: "relative w-full h-full overflow-hidden",
+                initial: {
+                    opacity: 0
+                },
+                whileHover: {
+                    opacity: 1
+                },
+                transition: {
+                    duration: 0.3
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110",
+                    style: {
+                        backgroundImage: `url("${cell.img}")`
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/src/components/home/CTASection.tsx",
+                    lineNumber: 65,
+                    columnNumber: 21
+                }, this)
+            }, cell.id, false, {
+                fileName: "[project]/src/components/home/CTASection.tsx",
+                lineNumber: 58,
+                columnNumber: 17
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/src/components/home/CTASection.tsx",
+        lineNumber: 56,
+        columnNumber: 9
+    }, this);
+}
+_s(HoverGrid, "M1j72coUl7JyMTMKfnollIaW2jE=");
+_c = HoverGrid;
+function CTASection() {
+    _s1();
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const { scrollYProgress } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScroll"])({
         target: sectionRef,
@@ -2103,29 +2193,36 @@ function CTASection() {
                     backgroundPosition: 'center',
                     y
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 bg-black/10"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/home/CTASection.tsx",
-                    lineNumber: 29,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black/10"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/home/CTASection.tsx",
+                        lineNumber: 97,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverGrid, {}, void 0, false, {
+                        fileName: "[project]/src/components/home/CTASection.tsx",
+                        lineNumber: 100,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
-                lineNumber: 19,
+                lineNumber: 87,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container relative z-10",
+                className: "container relative z-10 pointer-events-none",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm",
+                    className: "max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm pointer-events-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "font-serif text-4xl md:text-5xl font-light text-dark mb-6 leading-tight",
                             children: "Your Dream Stay Awaits!"
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 34,
+                            lineNumber: 105,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2133,7 +2230,7 @@ function CTASection() {
                             children: "Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli and Upcot Maskeliya."
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 37,
+                            lineNumber: 108,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2142,36 +2239,37 @@ function CTASection() {
                             children: "Enquire Now"
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 40,
+                            lineNumber: 111,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/home/CTASection.tsx",
-                    lineNumber: 33,
+                    lineNumber: 104,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
-                lineNumber: 32,
+                lineNumber: 103,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/home/CTASection.tsx",
-        lineNumber: 17,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }
-_s(CTASection, "yXAF/YIVHSTjaxFiyxYVLogzUuk=", false, function() {
+_s1(CTASection, "yXAF/YIVHSTjaxFiyxYVLogzUuk=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScroll"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"]
     ];
 });
-_c = CTASection;
-var _c;
-__turbopack_context__.k.register(_c, "CTASection");
+_c1 = CTASection;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "HoverGrid");
+__turbopack_context__.k.register(_c1, "CTASection");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

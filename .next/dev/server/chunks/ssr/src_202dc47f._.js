@@ -1993,6 +1993,89 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 ;
+const HOVER_IMAGES = [
+    // beach-bliss
+    "/beach-bliss/pool-main.jpg",
+    "/beach-bliss/living-room-main.jpg",
+    "/beach-bliss/master-bedroom-main.jpg",
+    "/beach-bliss/exterior-architecture.jpg",
+    "/beach-bliss/dining-table.jpg",
+    "/beach-bliss/pool-deck.jpg",
+    // hill-haven
+    "/hill-haven/exterior-1.jpg",
+    "/hill-haven/living-room-1.jpg",
+    "/hill-haven/master-bedroom-1.jpg",
+    "/hill-haven/patio-1.jpg",
+    "/hill-haven/dining-1.jpg",
+    "/hill-haven/exterior-2.jpg",
+    // luxury-penthouse
+    "/luxury-penthouse/living-room-1.jpg",
+    "/luxury-penthouse/pool-1.jpg",
+    "/luxury-penthouse/master-bedroom-1.jpg",
+    "/luxury-penthouse/jacuzzi-1.jpg",
+    "/luxury-penthouse/exterior-1.jpg",
+    "/luxury-penthouse/balcony-1.jpg",
+    // sandy-shores
+    "/sandy-shores/living-room-1.jpg",
+    "/sandy-shores/exterior-2.jpg",
+    "/sandy-shores/master-bedroom-1.jpg",
+    "/sandy-shores/pool-1.jpg",
+    "/sandy-shores/kitchen-1.jpg",
+    "/sandy-shores/bedroom-1-main.jpg",
+    // more variety
+    "/beach-bliss/exterior-night.jpg",
+    "/hill-haven/patio-3.jpg",
+    "/luxury-penthouse/gym-1.jpg",
+    "/sandy-shores/gym-1.jpg"
+];
+function HoverGrid() {
+    const columns = 12;
+    const rows = 6;
+    const totalCells = columns * rows;
+    const cells = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return Array.from({
+            length: totalCells
+        }).map((_, i)=>({
+                id: i,
+                img: HOVER_IMAGES[i % HOVER_IMAGES.length]
+            }));
+    }, [
+        totalCells
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "absolute inset-0 grid grid-cols-6 md:grid-cols-12 grid-rows-6 pointer-events-auto",
+        children: cells.map((cell)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                className: "relative w-full h-full overflow-hidden",
+                initial: {
+                    opacity: 0
+                },
+                whileHover: {
+                    opacity: 1
+                },
+                transition: {
+                    duration: 0.3
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110",
+                    style: {
+                        backgroundImage: `url("${cell.img}")`
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/src/components/home/CTASection.tsx",
+                    lineNumber: 65,
+                    columnNumber: 21
+                }, this)
+            }, cell.id, false, {
+                fileName: "[project]/src/components/home/CTASection.tsx",
+                lineNumber: 58,
+                columnNumber: 17
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/src/components/home/CTASection.tsx",
+        lineNumber: 56,
+        columnNumber: 9
+    }, this);
+}
 function CTASection() {
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const { scrollYProgress } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useScroll"])({
@@ -2021,29 +2104,36 @@ function CTASection() {
                     backgroundPosition: 'center',
                     y
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 bg-black/10"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/home/CTASection.tsx",
-                    lineNumber: 29,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black/10"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/home/CTASection.tsx",
+                        lineNumber: 97,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HoverGrid, {}, void 0, false, {
+                        fileName: "[project]/src/components/home/CTASection.tsx",
+                        lineNumber: 100,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
-                lineNumber: 19,
+                lineNumber: 87,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container relative z-10",
+                className: "container relative z-10 pointer-events-none",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm",
+                    className: "max-w-xl bg-floral-white/95 p-12 md:p-16 backdrop-blur-sm pointer-events-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "font-serif text-4xl md:text-5xl font-light text-dark mb-6 leading-tight",
                             children: "Your Dream Stay Awaits!"
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 34,
+                            lineNumber: 105,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2051,7 +2141,7 @@ function CTASection() {
                             children: "Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli and Upcot Maskeliya."
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 37,
+                            lineNumber: 108,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2060,24 +2150,24 @@ function CTASection() {
                             children: "Enquire Now"
                         }, void 0, false, {
                             fileName: "[project]/src/components/home/CTASection.tsx",
-                            lineNumber: 40,
+                            lineNumber: 111,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/home/CTASection.tsx",
-                    lineNumber: 33,
+                    lineNumber: 104,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/home/CTASection.tsx",
-                lineNumber: 32,
+                lineNumber: 103,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/home/CTASection.tsx",
-        lineNumber: 17,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }

@@ -179,3 +179,6 @@ Import traces:
 [02:37:33.162] Browser WARN    Image with src "https://cdn.jetphotos.com/640/6/2803923_1697735054.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [25:44:28.850] Server  LOG     ✓ Compiled in 694ms
 [25:45:26.155] Server  LOG     ✓ Compiled in 183ms
+[25:57:44.295] Server  LOG     ✓ Compiled in 1927ms
+[26:04:31.489] Server  LOG     ✓ Compiled in 4.7s
+[26:06:20.657] Server  LOG     ✓ Compiled in 336ms
