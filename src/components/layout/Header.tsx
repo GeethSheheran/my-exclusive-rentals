@@ -48,10 +48,10 @@ export function Header() {
     });
 
     const navLinks = [
-        { name: 'Home', href: '/', hasDropdown: false },
-        { name: 'Our Stays', href: '/our-stays', hasDropdown: true },
-        { name: 'About Us', href: '/about-us', hasDropdown: false },
-        { name: 'Contact', href: '/contact', hasDropdown: false },
+        { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/about-us' },
+        { name: 'Our Stay', href: '/our-stay' }, // This will be the dropdown trigger
+        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -89,7 +89,7 @@ export function Header() {
                     {/* Desktop Nav - Only show on lg and up */}
                     <nav className="hidden lg:flex items-center gap-1">
                         {navLinks.map((link) => (
-                            link.hasDropdown ? (
+                            link.name === 'Our Stay' ? ( // Check for 'Our Stay' to apply dropdown logic
                                 // Our Stays with Dropdown
                                 <div
                                     key={link.name}
@@ -136,11 +136,11 @@ export function Header() {
                                                                 <h3 className="font-serif text-3xl text-dark mt-1">Our Exclusive Stays</h3>
                                                             </div>
                                                             <Link
-                                                                href="/our-stays"
-                                                                className="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gold/80 hover:text-gold/100 transition-colors"
+                                                                href="/our-stay"
+                                                                className="text-gold text-xs font-bold tracking-widest flex items-center gap-2 hover:gap-3 transition-all group"
                                                             >
-                                                                View All
-                                                                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                                                VIEW ALL
+                                                                <ArrowRight className="w-3 h-3" />
                                                             </Link>
                                                         </div>
 
@@ -222,17 +222,29 @@ export function Header() {
                     </nav>
 
                     {/* CTA & Mobile Toggle */}
-                    <div className="flex items-center gap-3">
-                        <Button
-                            variant="solid"
-                            className="hidden lg:flex rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5"
-                        >
-                            Book Now
-                        </Button>
+                    <div className="flex items-center gap-2 lg:gap-3">
+                        <Link href="/contact">
+                            <Button
+                                variant="solid"
+                                className="hidden lg:flex rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5"
+                            >
+                                Book Now
+                            </Button>
+                        </Link>
+
+                        {/* Mobile Book Now Button - Compact */}
+                        <Link href="/contact" className="lg:hidden">
+                            <Button
+                                variant="solid"
+                                className="rounded-full !px-4 !py-3 text-[10px] font-bold tracking-wider shadow-md shadow-gold/10"
+                            >
+                                Book Now
+                            </Button>
+                        </Link>
 
                         {/* Mobile/Tablet Menu Toggle - Show on anything below lg */}
                         <button
-                            className="lg:hidden w-10 h-10 rounded-full bg-soft-gray flex items-center justify-center text-dark transition-colors hover:bg-gold hover:text-white"
+                            className="w-10 h-10 rounded-full bg-soft-gray flex items-center justify-center text-dark transition-colors hover:bg-gold hover:text-white"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -256,7 +268,7 @@ export function Header() {
                         transition={{ delay: 0.1 + idx * 0.1 }}
                         className="text-center"
                     >
-                        {link.hasDropdown ? (
+                        {link.name === 'Our Stay' ? ( // Check for 'Our Stay' to apply mobile dropdown logic
                             // Mobile Stays with Accordion
                             <div>
                                 <button
@@ -314,9 +326,11 @@ export function Header() {
                     animate={{ opacity: isMobileMenuOpen ? 1 : 0, y: isMobileMenuOpen ? 0 : 20 }}
                     transition={{ delay: 0.5 }}
                 >
-                    <Button className="rounded-full px-8 py-4 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
-                        Book Your Stay
-                    </Button>
+                    <Link href="/contact" className="w-full">
+                        <Button className="w-full rounded-full py-6 text-sm font-bold tracking-widest">
+                            BOOK YOUR STAY
+                        </Button>
+                    </Link>
                 </motion.div>
             </motion.div>
         </>

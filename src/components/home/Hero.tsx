@@ -130,15 +130,12 @@ export function Hero() {
             <div className="relative z-20 h-full flex flex-col lg:flex-row">
 
                 {/* LEFT: TEXT CONTENT */}
-                <div className="flex-1 flex flex-col justify-end px-8 md:px-16 lg:px-24 pt-24 lg:pt-0 pb-32">
+                <div className="relative h-full container mx-auto px-6 flex flex-col justify-center lg:justify-end pb-32 lg:pb-20 items-center lg:items-start text-center lg:text-left">
 
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={current}
                             className="max-w-2xl"
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
                         >
                             {/* Tag */}
                             {/* <motion.div
@@ -231,13 +228,18 @@ export function Hero() {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.6, delay: 0 }}
+                                transition={{ duration: 0.8, delay: 0.8 }}
+                                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
                             >
-                                <Link href="/stays">
-                                    <Button variant="solid" className="group !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5 flex items-center gap-3 rounded-full">
-                                        <span>Explore Our Stays</span>
+                                <Link href="/our-stay">
+                                    <Button className="!px-8 !py-5 text-xs font-bold tracking-wider group flex items-center gap-2 rounded-full w-full sm:w-auto">
+                                        Explore our stay
                                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </Button>
+                                </Link>
+                                <Link href="/contact" className="w-full sm:w-auto">
+                                    <Button variant="outline" className="!px-8 !py-5 text-xs font-bold tracking-wider border-white/30 text-white hover:bg-white hover:text-dark transition-all rounded-full w-full">
+                                        Book Now
                                     </Button>
                                 </Link>
                             </motion.div>
@@ -276,22 +278,22 @@ export function Hero() {
                         />
                     ))}
                 </div>
+            </div>
 
-                {/* Modern Chevron Buttons */}
-                <div className="flex items-center gap-2">
-                    <button
-                        onClick={prevSlide}
-                        className="group relative w-12 h-12 rounded-full border border-white/20  backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:border-gold hover:bg-gold/10"
-                    >
-                        <ChevronLeft className="w-5 h-5 text-white/70 group-hover:text-gold transition-colors" />
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        className="group relative w-12 h-12 rounded-full border border-white/20  backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:border-gold hover:bg-gold/10"
-                    >
-                        <ChevronRight className="w-5 h-5 text-white/70 group-hover:text-gold transition-colors" />
-                    </button>
-                </div>
+            {/* Navigation Controls - Desktop: Bottom Right, Mobile: Bottom Center below buttons */}
+            <div className="absolute lg:bottom-20 bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 z-20 flex gap-4">
+                <button
+                    onClick={prevSlide}
+                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all"
+                >
+                    <ChevronLeft size={24} />
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all"
+                >
+                    <ChevronRight size={24} />
+                </button>
             </div>
 
         </section>

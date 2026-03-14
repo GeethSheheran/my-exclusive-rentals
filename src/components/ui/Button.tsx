@@ -6,6 +6,7 @@ import { motion, HTMLMotionProps } from 'framer-motion';
 interface ButtonProps extends HTMLMotionProps<'button'> {
     variant?: 'solid' | 'outline' | 'ghost';
     children: React.ReactNode;
+    type?: 'submit' | 'button' | 'reset';
 }
 
 export function Button({ variant = 'solid', className, children, ...props }: ButtonProps) {

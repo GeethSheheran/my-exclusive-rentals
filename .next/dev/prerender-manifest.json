@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/stays/beach-bliss":{},"/stays/sandy-shores":{},"/stays/luxury-penthouse":{},"/stays/hill-haven":{}},"dynamicRoutes":{"/stays/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/stays/[slug]","routeRegex":"^\\/stays\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"f0f74bc4852c8056f53640bbff393095","previewModeSigningKey":"664d21143f2cc55b37e1f4e8c72c4eb76ce90c516ae7d7247a4a51f2bc9770b2","previewModeEncryptionKey":"8daa896aeab4a94d64eea580d16d70b2acaa3c151625216c972e192b7a2e0039"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "d912df1c10b1a199cc16a8241089745d",
+    "previewModeSigningKey": "a76b1bb6cb31f0f5344b078c0a46e14e886eb66a334cfd6c09a6df7e13ef417a",
+    "previewModeEncryptionKey": "19965070539c29271d338fb2246e37f8023308c9301839045f7eadc616ea9a5d"
+  }
+}

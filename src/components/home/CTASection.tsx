@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -37,12 +38,14 @@ export function CTASection() {
                     <p className="text-dark/80 text-lg leading-relaxed font-sans mb-10">
                         Book your stay with Exclusive Rentals today and experience the perfect blend of luxury and tranquility in Nilaveli and Upcot Maskeliya.
                     </p>
-                    <Button
-                        variant="outline"
-                        className="rounded-full border-dark/20 text-dark hover:bg-dark hover:text-white px-10 py-4 text-sm font-bold tracking-widest transition-all duration-500 uppercase"
-                    >
-                        Enquire Now
-                    </Button>
+                    <Link href="/contact">
+                        <Button
+                            variant="outline"
+                            className="rounded-full border-dark/20 text-dark hover:bg-dark hover:text-white px-10 py-4 text-sm font-bold tracking-widest transition-all duration-500 uppercase"
+                        >
+                            Enquire Now
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>
