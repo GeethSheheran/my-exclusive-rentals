@@ -237,14 +237,14 @@ export function Header() {
                         <Button
                             variant="solid"
                             onClick={openModal}
-                            className="rounded-full !px-4 !py-3 text-[10px] font-bold tracking-wider shadow-md shadow-gold/10"
+                            className="lg:hidden rounded-full !px-4 !py-3 text-[10px] font-bold tracking-wider shadow-md shadow-gold/10"
                         >
                             Book Now
                         </Button>
 
                         {/* Mobile/Tablet Menu Toggle - Show on anything below lg */}
                         <button
-                            className="w-10 h-10 rounded-full bg-soft-gray flex items-center justify-center text-dark transition-colors hover:bg-gold hover:text-white"
+                            className="lg:hidden w-10 h-10 rounded-full bg-soft-gray flex items-center justify-center text-dark transition-colors hover:bg-gold hover:text-white"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}

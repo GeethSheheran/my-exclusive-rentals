@@ -8,7 +8,7 @@ import { CTASection } from '@/components/home/CTASection';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <Header />
 
       {/* Sticky Hero Container */}

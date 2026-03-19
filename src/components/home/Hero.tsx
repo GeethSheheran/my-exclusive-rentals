@@ -234,7 +234,7 @@ export function Hero() {
                                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
                             >
                                 <Link href="/our-stay">
-                                    <Button className="!px-8 !py-5 text-xs font-bold tracking-wider group flex items-center gap-2 rounded-full w-full sm:w-auto">
+                                    <Button className="!px-8 !py-5 text-xs font-bold tracking-wider group flex items-center justify-center gap-2 rounded-full w-full sm:w-58">
                                         Explore our stay
                                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                     </Button>
@@ -242,7 +242,7 @@ export function Hero() {
                                 <Button 
                                     variant="outline" 
                                     onClick={openModal}
-                                    className="!px-8 !py-5 text-xs font-bold tracking-wider border-white/30 text-white hover:bg-white hover:text-dark transition-all rounded-full w-full"
+                                    className="!px-8 !py-5 text-xs font-bold tracking-wider border-white/30 text-white hover:bg-white hover:text-dark transition-all rounded-full w-58 sm:w-58"
                                 >
                                     Book Now
                                 </Button>
@@ -253,51 +253,53 @@ export function Hero() {
                 </div>
             </div>
 
-            {/* BOTTOM RIGHT: Modern Chevron Navigation */}
-            <div className="absolute bottom-8 md:pb-16 pb-24 right-8 md:right-16 lg:right-24 flex items-center gap-6 z-30">
+            {/* BOTTOM RIGHT: Modern Chevron Navigation and Progress */}
+            <div className="absolute bottom-8 right-8 md:right-16 lg:right-24 flex flex-col items-center lg:items-end gap-6 z-30 w-full sm:w-auto left-0 sm:left-auto">
 
-                {/* Slide counter */}
-                <div className="hidden sm:flex items-center gap-3 text-white/60">
-                    <span className="text-2xl font-serif text-white">
-                        {String(current + 1).padStart(2, '0')}
-                    </span>
-                    <div className="w-12 h-[1px] bg-white/30" />
-                    <span className="text-sm font-sans tracking-widest">
-                        {String(SLIDES.length).padStart(2, '0')}
-                    </span>
+                {/* Navigation Controls - Desktop: Connected to dots, Mobile: Bottom Center below buttons */}
+                <div className="flex gap-4 mb-4 lg:mb-0">
+                    <button
+                        onClick={prevSlide}
+                        className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all backdrop-blur-sm"
+                    >
+                        <ChevronLeft size={24} />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all backdrop-blur-sm"
+                    >
+                        <ChevronRight size={24} />
+                    </button>
                 </div>
 
-                {/* Progress dots */}
-                <div className="hidden md:flex items-center gap-2">
-                    {SLIDES.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`
-                                transition-all duration-300 rounded-full
-                                ${current === index
-                                    ? 'w-8 h-2 bg-gold'
-                                    : 'w-2 h-2 bg-white/20 hover:bg-white/40'}
-                            `}
-                        />
-                    ))}
-                </div>
-            </div>
+                <div className="flex items-center gap-6">
+                    {/* Slide counter */}
+                    <div className="hidden sm:flex items-center gap-3 text-white/60">
+                        <span className="text-2xl font-serif text-white">
+                            {String(current + 1).padStart(2, '0')}
+                        </span>
+                        <div className="w-12 h-[1px] bg-white/30" />
+                        <span className="text-sm font-sans tracking-widest">
+                            {String(SLIDES.length).padStart(2, '0')}
+                        </span>
+                    </div>
 
-            {/* Navigation Controls - Desktop: Bottom Right, Mobile: Bottom Center below buttons */}
-            <div className="absolute lg:bottom-20 bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 z-20 flex gap-4">
-                <button
-                    onClick={prevSlide}
-                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all"
-                >
-                    <ChevronLeft size={24} />
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-dark transition-all"
-                >
-                    <ChevronRight size={24} />
-                </button>
+                    {/* Progress dots */}
+                    <div className="hidden md:flex items-center gap-2">
+                        {SLIDES.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                className={`
+                                    transition-all duration-300 rounded-full
+                                    ${current === index
+                                        ? 'w-8 h-2 bg-gold'
+                                        : 'w-2 h-2 bg-white/20 hover:bg-white/40'}
+                                `}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
         </section>
