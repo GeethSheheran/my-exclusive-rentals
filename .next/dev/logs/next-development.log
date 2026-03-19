@@ -1,9 +1,1 @@
-[00:00:06.425] Server  LOG     ✓ Ready in 6.1s
-[00:00:34.646] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:34.952] Browser WARN    Image with src "/er-logo.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:34.952] Browser WARN    Image with src "/er-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:35.537] Browser ERROR   EmailJS Error Details: {"fullError":{"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."},"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."}
-[00:02:52.543] Browser ERROR   EmailJS Error Details: {"fullError":{"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."},"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."}
-[00:03:54.230] Browser ERROR   EmailJS Error Details: {"fullError":{"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."},"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."}
-[00:05:02.826] Browser ERROR   EmailJS Error Details: {"fullError":{"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."},"status":412,"text":"Gmail_API: Request had insufficient authentication scopes."}
-[00:09:06.301] Server  LOG     ✓ Compiled in 260ms
+[00:00:06.337] Server  LOG     ✓ Ready in 5.7s

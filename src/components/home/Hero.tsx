@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useInquiry } from '@/context/InquiryContext';
 
 import Link from 'next/link';
 
@@ -52,6 +53,7 @@ const AUTOPLAY_DURATION = 8000;
 export function Hero() {
     const [current, setCurrent] = useState(0);
     const [progress, setProgress] = useState(0);
+    const { openModal } = useInquiry();
 
     // Progress bar and auto-play
     // Progress bar and auto-play
@@ -237,11 +239,13 @@ export function Hero() {
                                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </Link>
-                                <Link href="/contact" className="w-full sm:w-auto">
-                                    <Button variant="outline" className="!px-8 !py-5 text-xs font-bold tracking-wider border-white/30 text-white hover:bg-white hover:text-dark transition-all rounded-full w-full">
-                                        Book Now
-                                    </Button>
-                                </Link>
+                                <Button 
+                                    variant="outline" 
+                                    onClick={openModal}
+                                    className="!px-8 !py-5 text-xs font-bold tracking-wider border-white/30 text-white hover:bg-white hover:text-dark transition-all rounded-full w-full"
+                                >
+                                    Book Now
+                                </Button>
                             </motion.div>
                         </motion.div>
                     </AnimatePresence>

@@ -1,7 +1,8 @@
 'use client';
 
-import { Bed, Scaling, BedDouble, Armchair, Wifi, UtensilsCrossed, Check } from 'lucide-react';
+import { Bed, Scaling, BedDouble, Armchair, Wifi, UtensilsCrossed } from 'lucide-react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 interface VillaDetailsProps {
     stats: {
@@ -23,7 +24,7 @@ interface VillaDetailsProps {
     };
 }
 
-const StatItem = ({ icon: Icon, title, detail, items }: { icon: any; title: string; detail?: string; items?: string[] }) => (
+const StatItem = ({ icon: Icon, title, detail, items }: { icon: React.ElementType; title: string; detail?: string; items?: string[] }) => (
     <div className="flex gap-6 items-start">
         <div className="p-3 bg-floral-white rounded-xl border border-gold/10 text-gold shrink-0">
             <Icon size={28} strokeWidth={1.5} />
@@ -45,7 +46,7 @@ const StatItem = ({ icon: Icon, title, detail, items }: { icon: any; title: stri
     </div>
 );
 
-const AmenityItem = ({ title, icon: Icon, detail, items }: { title: string; icon: any; detail?: string; items?: string[] }) => (
+const AmenityItem = ({ title, icon: Icon, detail, items }: { title: string; icon: React.ElementType; detail?: string; items?: string[] }) => (
     <div className="flex gap-8 items-start mb-12 last:mb-0">
         <div className="text-gold shrink-0 mt-1">
             <Icon size={48} strokeWidth={1} />

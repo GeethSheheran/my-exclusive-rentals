@@ -3,6 +3,8 @@ import { Poiret_One, Outfit } from "next/font/google";
 import "./globals.css";
 
 import { SplashScreen } from "@/components/layout/SplashScreen";
+import { InquiryProvider } from "@/context/InquiryContext";
+import { InquiryModal } from "@/components/ui/InquiryModal";
 
 const poiret = Poiret_One({
   subsets: ["latin"],
@@ -79,8 +81,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poiret.variable} ${outfit.variable}`}>
       <body className="font-sans antialiased text-dark bg-white">
-        <SplashScreen />
-        {children}
+        <InquiryProvider>
+          <SplashScreen />
+          {children}
+          <InquiryModal />
+        </InquiryProvider>
 
         {/* Organization Schema */}
         <script

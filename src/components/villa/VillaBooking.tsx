@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
+import { useInquiry } from '@/context/InquiryContext';
 
 interface VillaBookingProps {
     villaName: string;
@@ -9,6 +9,7 @@ interface VillaBookingProps {
 }
 
 export function VillaBooking({ villaName }: VillaBookingProps) {
+    const { openModal } = useInquiry();
     return (
         <section className="bg-floral-white py-24 lg:py-32">
             <div className="container mx-auto px-4">
@@ -26,14 +27,13 @@ export function VillaBooking({ villaName }: VillaBookingProps) {
                     </p>
 
                     {/* CTA Button */}
-                    <Link href="/contact">
-                        <Button
-                            variant="solid"
-                            className="rounded-full px-10 py-6 text-sm uppercase tracking-widest shadow-xl"
-                        >
-                            Reserve Now
-                        </Button>
-                    </Link>
+                    <Button
+                        variant="solid"
+                        onClick={openModal}
+                        className="rounded-full px-10 py-6 text-sm uppercase tracking-widest shadow-xl"
+                    >
+                        Reserve Now
+                    </Button>
                 </div>
             </div>
         </section>

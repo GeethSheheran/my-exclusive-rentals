@@ -24,7 +24,7 @@ export function VillaPageClient({ villa }: VillaPageClientProps) {
             {/* Back Link */}
             <div className="fixed top-44 left-10 z-40">
                 <Link
-                    href="/our-stays"
+                    href="/our-stay"
                     className="group flex items-center bg-white/80 backdrop-blur-md border border-white/40 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 overflow-hidden"
                 >
                     <div className="w-11 h-11 rounded-full bg-gold flex items-center justify-center flex-shrink-0 group-hover:bg-gold/90 transition-colors duration-300">

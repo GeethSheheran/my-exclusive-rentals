@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, ArrowUpRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import emailjs from '@emailjs/browser';
 
@@ -39,15 +39,16 @@ export function ContactSection() {
             );
             setStatus('success');
             setFormData({ first_name: '', last_name: '', email: '', message: '' });
-        } catch (error: any) {
+        } catch (error: unknown) {
+            const err = error as { status?: number; text?: string; message?: string };
             console.error('EmailJS Error Details:', {
-                status: error?.status,
-                text: error?.text,
-                message: error?.message,
-                fullError: error
+                status: err?.status,
+                text: err?.text,
+                message: err?.message,
+                fullError: err
             });
             setStatus('error');
-            setErrorMessage(error?.text || 'Failed to send message. Please try again later.');
+            setErrorMessage(err?.text || 'Failed to send message. Please try again later.');
         }
     };
 

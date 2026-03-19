@@ -7,6 +7,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-
 import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { useInquiry } from '@/context/InquiryContext';
 
 // Villa/Stays data for dropdown
 const STAYS = [
@@ -42,6 +43,7 @@ export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isStaysDropdownOpen, setIsStaysDropdownOpen] = useState(false);
     const [isMobileStaysOpen, setIsMobileStaysOpen] = useState(false);
+    const { openModal } = useInquiry();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 20);
@@ -223,24 +225,22 @@ export function Header() {
 
                     {/* CTA & Mobile Toggle */}
                     <div className="flex items-center gap-2 lg:gap-3">
-                        <Link href="/contact">
-                            <Button
-                                variant="solid"
-                                className="hidden lg:flex rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5"
-                            >
-                                Book Now
-                            </Button>
-                        </Link>
+                        <Button
+                            variant="solid"
+                            onClick={openModal}
+                            className="hidden lg:flex rounded-full !px-6 !py-5 text-xs font-bold tracking-wider shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all hover:-translate-y-0.5"
+                        >
+                            Book Now
+                        </Button>
 
                         {/* Mobile Book Now Button - Compact */}
-                        <Link href="/contact" className="lg:hidden">
-                            <Button
-                                variant="solid"
-                                className="rounded-full !px-4 !py-3 text-[10px] font-bold tracking-wider shadow-md shadow-gold/10"
-                            >
-                                Book Now
-                            </Button>
-                        </Link>
+                        <Button
+                            variant="solid"
+                            onClick={openModal}
+                            className="rounded-full !px-4 !py-3 text-[10px] font-bold tracking-wider shadow-md shadow-gold/10"
+                        >
+                            Book Now
+                        </Button>
 
                         {/* Mobile/Tablet Menu Toggle - Show on anything below lg */}
                         <button
@@ -326,11 +326,15 @@ export function Header() {
                     animate={{ opacity: isMobileMenuOpen ? 1 : 0, y: isMobileMenuOpen ? 0 : 20 }}
                     transition={{ delay: 0.5 }}
                 >
-                    <Link href="/contact" className="w-full">
-                        <Button className="w-full rounded-full py-6 text-sm font-bold tracking-widest">
-                            BOOK YOUR STAY
-                        </Button>
-                    </Link>
+                    <Button 
+                        onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            openModal();
+                        }}
+                        className="w-full rounded-full py-6 text-sm font-bold tracking-widest"
+                    >
+                        BOOK YOUR STAY
+                    </Button>
                 </motion.div>
             </motion.div>
         </>
