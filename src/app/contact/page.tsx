@@ -1,25 +1,21 @@
-'use client';
+import type { Metadata } from "next";
+import { ContactPageClient } from "./ContactPageClient";
+import { buildPageMetadata } from "@/lib/seo";
 
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { ContactHero } from '@/components/contact/ContactHero';
-import { ContactSection } from '@/components/contact/ContactSection';
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact My Exclusive Rentals in Nilaveli, Sri Lanka",
+  description:
+    "Contact My Exclusive Rentals for direct booking inquiries, availability, and personalized support for your stay in Nilaveli and Trincomalee.",
+  path: "/contact/",
+  keywords: [
+    "Contact My Exclusive Rentals",
+    "Book Nilaveli vacation rental",
+    "Trincomalee stay inquiry",
+    "Sri Lanka rental contact",
+  ],
+});
 
 export default function ContactPage() {
-    return (
-        <main className="min-h-screen">
-            <Header />
-
-            {/* Sticky Hero Container */}
-            <div className="sticky top-0 h-[70vh] z-0">
-                <ContactHero />
-            </div>
-
-            {/* Scrolling Content */}
-            <div className="relative z-10">
-                <ContactSection />
-                <Footer />
-            </div>
-        </main>
-    );
+  return <ContactPageClient />;
 }
+

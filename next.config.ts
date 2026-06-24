@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // ✅ Enable static export
   output: "export",
-
-  // ✅ Required for static hosting (Next Image optimization won't work)
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -17,3 +15,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
