@@ -2,8 +2,6 @@
 
 import { Section } from '@/components/ui/Section';
 
-import Link from 'next/link';
-
 // Exact content from the screenshot
 // Exact content from the screenshot
 const STAYS = [
@@ -11,25 +9,25 @@ const STAYS = [
         title: "Beach Bliss",
         desc: "A peaceful retreat with stunning ocean views, perfect for unwinding by the sea.",
         image: "/Beach-Bliss-Home.jpg",
-        href: "/stays/beach-bliss"
+        href: "/stays/beach-bliss/"
     },
     {
         title: "Sandy Shores",
         desc: "A cozy, beachside escape offering comfort and charm just steps from the sand.",
         image: "/sandy-shores-main.jpg",
-        href: "/stays/sandy-shores"
+        href: "/stays/sandy-shores/"
     },
     {
         title: "Luxury Penthouse",
         desc: "An elegant and spacious haven with breathtaking views and exclusive luxury.",
         image: "/Luxury-Penthouse-Home.jpg",
-        href: "/stays/luxury-penthouse"
+        href: "/stays/luxury-penthouse/"
     },
     {
         title: "Hill Haven",
         desc: "A colonial bungalow, embraced by the lush tea plantations where the hills whisper serenity.",
         image: "/hill-main.jpg",
-        href: "/stays/hill-haven"
+        href: "/stays/hill-haven/"
     }
 ];
 
@@ -54,24 +52,25 @@ export function PropertyGrid() {
                 {/* 2. Modern Staggered Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-start">
                     {STAYS.map((stay, idx) => (
-                        <Link
+                        <a
                             key={idx}
                             href={stay.href}
-                            className="flex flex-col items-center text-center group cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                            className="relative z-10 flex flex-col items-center text-center group cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                            aria-label={`View details for ${stay.title}`}
                         >
 
                             {/* Image Container - Aspect 3:4 for elegance */}
                             <div className="w-full aspect-[3/4] overflow-hidden mb-8 relative bg-soft-gray shadow-sm">
                                 <div
-                                    className="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    className="pointer-events-none w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110"
                                     style={{ backgroundImage: `url('${stay.image}')` }}
                                 />
                                 {/* Hover Overlay */}
-                                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="pointer-events-none absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
 
                             {/* Content */}
-                            <div className="px-2">
+                            <div className="pointer-events-none px-2">
                                 <h3 className="font-serif text-3xl text-dark mb-3 decoration-gold group-hover:underline underline-offset-8 decoration-1 transition-all">
                                     {stay.title}
                                 </h3>
@@ -87,7 +86,7 @@ export function PropertyGrid() {
                                 </div>
                             </div>
 
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>
