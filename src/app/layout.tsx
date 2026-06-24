@@ -5,6 +5,7 @@ import "./globals.css";
 import { SplashScreen } from "@/components/layout/SplashScreen";
 import { InquiryProvider } from "@/context/InquiryContext";
 import { InquiryModal } from "@/components/ui/InquiryModal";
+import { SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/seo";
 
 const poiret = Poiret_One({
   subsets: ["latin"],
@@ -20,35 +21,23 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "My Exclusive Rentals | Beachfront Hotel Network in Nilaveli, Sri Lanka",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | Luxury Vacation Rentals in Sri Lanka`,
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
-    "My Exclusive Rentals offers curated beachfront stays in Nilaveli and Trincomalee, Sri Lanka. Discover luxury apartments and premium coastal living.",
+    "Discover curated beachfront and hill-country stays by My Exclusive Rentals in Nilaveli, Trincomalee, and beyond.",
+  applicationName: SITE_NAME,
   keywords: [
     "My Exclusive Rentals",
-    "Hotels in Nilaveli",
-    "Hotels in Nilaweli",
-    "Nilaveli Beach Hotels",
-    "Hotels in Trincomalee",
-    "Luxury stays Nilaveli",
+    "Luxury vacation rentals Sri Lanka",
+    "Beachfront stays Nilaveli",
+    "Trincomalee stays",
   ],
-  alternates: {
-    canonical: "https://myexclusiverentals.com",
-  },
-  openGraph: {
-    title: "My Exclusive Rentals | Beachfront Hotel Network in Nilaveli",
-    description:
-      "Curated beachfront stays in Nilaveli and Trincomalee Sri Lanka.",
-    url: "https://myexclusiverentals.com",
-    siteName: "My Exclusive Rentals",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "My Exclusive Rentals | Nilaveli Beachfront Stays",
-    description:
-      "Discover premium beachfront stays in Nilaveli and Trincomalee, Sri Lanka.",
-  },
+  openGraph: { siteName: SITE_NAME, locale: "en_US", type: "website" },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -59,23 +48,11 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "My Exclusive Rentals",
-    url: "https://myexclusiverentals.com",
-    logo: "https://myexclusiverentals.com/logo.png",
-  };
-
-  const hotelSchema = {
-    "@context": "https://schema.org",
-    "@type": "Hotel",
-    name: "My Exclusive Rentals",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Nilaveli",
-      addressRegion: "Trincomalee",
-      addressCountry: "Sri Lanka",
-    },
-    areaServed: "Nilaveli",
-    url: "https://myexclusiverentals.com",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: absoluteUrl("/er-logo.png"),
+    telephone: "+94 77 765 4560",
+    email: "info@myexclusiverentals.com",
   };
 
   return (
@@ -92,14 +69,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
-          }}
-        />
-
-        {/* Hotel Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(hotelSchema),
           }}
         />
       </body>

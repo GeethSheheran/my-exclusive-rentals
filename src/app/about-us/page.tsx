@@ -1,19 +1,21 @@
-'use client';
+import type { Metadata } from "next";
+import { AboutPageClient } from "./AboutPageClient";
+import { buildPageMetadata } from "@/lib/seo";
 
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { AboutHero } from '@/components/about/AboutHero';
-import { MissionSection } from '@/components/about/MissionSection';
-import { HostsSection } from '@/components/about/HostsSection';
+export const metadata: Metadata = buildPageMetadata({
+  title: "About Our Luxury Stays in Nilaveli and Sri Lanka",
+  description:
+    "Learn the story behind My Exclusive Rentals and how we curate premium beachfront and hill-country stays across Sri Lanka.",
+  path: "/about-us/",
+  keywords: [
+    "About My Exclusive Rentals",
+    "Luxury stays Sri Lanka",
+    "Nilaveli vacation rental host",
+    "Trincomalee rental company",
+  ],
+});
 
 export default function AboutPage() {
-    return (
-        <main className="min-h-screen bg-white">
-            <Header />
-            <AboutHero />
-            <MissionSection />
-            <HostsSection />
-            <Footer />
-        </main>
-    );
+  return <AboutPageClient />;
 }
+

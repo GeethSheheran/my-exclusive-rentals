@@ -1,0 +1,24 @@
+site: My Exclusive Rentals
+url: https://myexclusiverentals.com/
+description: Luxury vacation rentals in Sri Lanka, including beachfront stays in Nilaveli and Trincomalee.
+
+pages:
+- https://myexclusiverentals.com/
+- https://myexclusiverentals.com/our-stay/
+- https://myexclusiverentals.com/about-us/
+- https://myexclusiverentals.com/contact/
+- https://myexclusiverentals.com/stays/beach-bliss/
+- https://myexclusiverentals.com/stays/sandy-shores/
+- https://myexclusiverentals.com/stays/luxury-penthouse/
+- https://myexclusiverentals.com/stays/hill-haven/
+
+properties:
+- Beach Bliss: Family-friendly apartment near Nilaveli Beach with ocean views and resort amenities.
+- Sandy Shores: Spacious beachfront apartment in Nilaveli with balcony views and premium comfort.
+- Luxury Penthouse: High-end penthouse stay with panoramic ocean views and rooftop jacuzzi access.
+- Hill Haven: Colonial-style bungalow retreat in Sri Lanka hill country surrounded by tea plantations.
+
+contact:
+- Phone: +94 77 765 4560
+- Email: info@myexclusiverentals.com
+
