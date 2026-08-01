@@ -45,8 +45,14 @@ export function Footer() {
                     <div>
                         <h4 className="font-serif text-gold text-lg mb-6">Explore</h4>
                         <ul className="space-y-3">
-                            {['Our Stays', 'Gallery', 'About Us', 'Contact'].map((item) => {
-                                const href = item === 'About Us' ? '/about-us' : item === 'Contact' ? '/contact' : '#';
+                            {['Our Stays', 'Blogs', 'About Us', 'Contact'].map((item) => {
+                                const href = item === 'Our Stays'
+                                    ? '/our-stay'
+                                    : item === 'Blogs'
+                                        ? '/blog'
+                                        : item === 'About Us'
+                                            ? '/about-us'
+                                            : '/contact';
                                 return (
                                     <li key={item}>
                                         <a
