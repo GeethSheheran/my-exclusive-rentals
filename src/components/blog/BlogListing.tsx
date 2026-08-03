@@ -119,7 +119,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
     <>
       <FeaturedStory post={featuredPost} />
       {remainingPosts.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-10 gap-y-14 pt-16 md:grid-cols-2 md:pt-24 lg:gap-x-16 lg:gap-y-20">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-14 pt-16 md:grid-cols-2 md:pt-24 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-20">
           {remainingPosts.map((post) => (
             <StoryCard key={post.id} post={post} />
           ))}
