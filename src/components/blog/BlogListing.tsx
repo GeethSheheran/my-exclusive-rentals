@@ -5,9 +5,7 @@ import { formatBlogDate, type BlogPost } from "@/lib/blog";
 
 function PostMeta({ post }: { post: BlogPost }) {
   const date = formatBlogDate(post.publishedAt);
-  const items = [post.category, date, post.author ? `By ${post.author}` : ""].filter(
-    Boolean,
-  );
+  const items = [post.category, date].filter(Boolean);
 
   if (items.length === 0) return null;
 
@@ -45,7 +43,7 @@ function FeaturedStory({ post }: { post: BlogPost }) {
             Featured story
           </span>
           <PostMeta post={post} />
-          <h2 className="mt-6 break-words font-serif text-4xl leading-[1.06] text-dark transition-colors duration-300 group-hover:text-gold md:text-6xl">
+          <h2 className="mt-6 break-words font-serif text-4xl leading-[1.06] text-dark transition-colors duration-300 group-hover:text-gold md:text-5xl">
             {post.title}
           </h2>
           {post.excerpt && (
