@@ -9,7 +9,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Blogs: Sri Lanka Travel Stories and Stay Guides",
+  title: "Blog: Sri Lanka Travel Stories and Stay Guides",
   description:
     "Explore travel notes, local guides, and stories from the coast and hill country by My Exclusive Rentals.",
   path: "/blog/",
@@ -40,7 +40,7 @@ export default async function BlogPage() {
           <div className="grid grid-cols-1 gap-10 pb-16 md:pb-24 lg:grid-cols-12 lg:items-end">
             <div className="min-w-0 lg:col-span-8">
               <span className="mb-7 block font-sans text-xs font-bold uppercase tracking-[0.4em] text-gold">
-                Blogs
+                Blog
               </span>
               <h1 className="max-w-5xl break-words font-serif text-5xl leading-[1.02] text-dark sm:text-6xl md:text-8xl md:leading-[0.98] lg:text-9xl">
                 Stories from the coast <span className="text-gold">&amp;</span> hills

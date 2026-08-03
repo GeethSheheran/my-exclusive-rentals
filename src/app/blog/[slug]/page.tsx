@@ -155,7 +155,7 @@ export default async function BlogArticlePage({
             className="mb-12 inline-flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-dark/50 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4"
           >
             <ArrowLeft aria-hidden="true" size={16} />
-            Back to blogs
+            Back to Blog
           </Link>
 
           <header className="mx-auto max-w-6xl text-left">

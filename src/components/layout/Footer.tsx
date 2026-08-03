@@ -61,10 +61,10 @@ export function Footer() {
                     <div>
                         <h4 className="font-serif text-gold text-lg mb-6">Explore</h4>
                         <ul className="space-y-3">
-                            {['Our Stays', 'Blogs', 'About Us', 'Contact'].map((item) => {
+                            {['Our Stays', 'Blog', 'About Us', 'Contact'].map((item) => {
                                 const href = item === 'Our Stays'
                                     ? '/our-stay'
-                                    : item === 'Blogs'
+                                    : item === 'Blog'
                                         ? '/blog'
                                         : item === 'About Us'
                                             ? '/about-us'

@@ -53,7 +53,7 @@ export function Header() {
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about-us' },
         { name: 'Our Stay', href: '/our-stay' }, // This will be the dropdown trigger
-        { name: 'Blogs', href: '/blog' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/contact' },
     ];
 
