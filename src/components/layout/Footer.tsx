@@ -3,6 +3,19 @@
 import Image from 'next/image';
 import { Facebook, Instagram } from 'lucide-react';
 
+const socialLinks = [
+    {
+        label: 'Facebook',
+        href: 'https://www.facebook.com/profile.php?id=61586474969325',
+        Icon: Facebook,
+    },
+    {
+        label: 'Instagram',
+        href: 'https://www.instagram.com/myexclusiverentals?igsh=cnBnNHlxc2ZleXdj',
+        Icon: Instagram,
+    },
+];
+
 export function Footer() {
     return (
         <footer className="bg-soft-gray text-dark">
@@ -29,13 +42,16 @@ export function Footer() {
                             Exclusive Rentals, we offer luxurious stays around Sri Lanka designed for comfort and convenience. Whether for a short stay or a longer getaway, our properties provide the perfect blend of modern amenities with locations near the beach and the mountains, ensuring a relaxing and memorable experience.
                         </p>
                         <div className="flex gap-4 pt-2">
-                            {[Facebook, Instagram].map((Icon, i) => (
+                            {socialLinks.map(({ label, href, Icon }) => (
                                 <a
-                                    key={i}
-                                    href="#"
+                                    key={label}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Visit Exclusive Rentals on ${label}`}
                                     className="text-dark/40 hover:text-gold transition-colors duration-300"
                                 >
-                                    <Icon size={20} strokeWidth={1.5} />
+                                    <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
                                 </a>
                             ))}
                         </div>
