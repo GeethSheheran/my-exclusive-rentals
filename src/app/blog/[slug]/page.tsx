@@ -80,7 +80,7 @@ function ArticleMeta({ post }: { post: BlogPost }) {
   if (items.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-dark/45">
+    <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-dark/45">
       {items.map((item, index) => (
         <span key={item} className="flex items-center gap-4">
           {index > 0 && <span aria-hidden="true" className="h-px w-6 bg-gold/60" />}
@@ -158,15 +158,12 @@ export default async function BlogArticlePage({
             Back to blogs
           </Link>
 
-          <header className="mx-auto max-w-5xl text-center">
-            <span className="mb-7 block font-sans text-xs font-bold uppercase tracking-[0.35em] text-gold">
-              {post.category || "Blog"}
-            </span>
-            <h1 className="break-words font-serif text-5xl leading-[1.02] text-dark md:text-7xl lg:text-8xl">
+          <header className="mx-auto max-w-6xl text-left">
+            <h1 className="break-words font-serif text-4xl leading-[1.02] text-dark md:text-6xl lg:text-7xl">
               {post.title}
             </h1>
             {post.excerpt && (
-              <p className="mx-auto mt-8 max-w-3xl font-sans text-lg font-light leading-relaxed text-dark/55 md:text-xl">
+              <p className="mt-8 max-w-3xl font-sans text-lg font-light leading-relaxed text-dark/55 md:text-xl">
                 {post.excerpt}
               </p>
             )}
@@ -184,7 +181,7 @@ export default async function BlogArticlePage({
             />
           </div>
 
-          <div className="mx-auto mt-16 max-w-3xl border-t border-dark/10 pt-12 md:mt-24 md:pt-16">
+          <div className="mx-auto mt-16 max-w-6xl border-t border-dark/10 pt-12 md:mt-24 md:pt-16">
             {paragraphs.length > 0 ? (
               <div className="space-y-8">
                 {paragraphs.map((paragraph, index) => (
