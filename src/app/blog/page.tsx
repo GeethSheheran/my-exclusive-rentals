@@ -42,7 +42,7 @@ export default async function BlogPage() {
               <span className="mb-7 block font-sans text-xs font-bold uppercase tracking-[0.4em] text-gold">
                 Blog
               </span>
-              <h1 className="max-w-5xl break-words font-serif text-5xl leading-[1.02] text-dark sm:text-6xl md:text-8xl md:leading-[0.98] lg:text-9xl">
+              <h1 className="max-w-5xl break-words font-serif text-4xl leading-[1.05] text-dark sm:text-5xl md:text-6xl lg:text-7xl">
                 Stories from the coast <span className="text-gold">&amp;</span> hills
               </h1>
             </div>
