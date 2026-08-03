@@ -64,15 +64,9 @@ export function VillaLocation({
                         <h3 className="font-serif text-3xl md:text-4xl text-dark mb-6 tracking-tight">
                             {locationTitle}
                         </h3>
-                        <p className="font-sans text-dark/60 font-light leading-relaxed mb-8 text-base md:text-lg">
+                        <p className="font-sans text-dark/60 font-light leading-relaxed text-base md:text-lg">
                             {locationDescription}
                         </p>
-                        <button
-                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-dark hover:text-gold transition-colors flex items-center gap-2 group/btn"
-                        >
-                            Visit Now <span className="text-lg group-hover/btn:translate-x-1 transition-transform">+</span>
-                        </button>
                     </motion.div>
                 </div>
 
@@ -170,4 +164,3 @@ function HoverAttraction({ attraction }: { attraction?: Attraction }) {
         </span>
     );
 }
-
