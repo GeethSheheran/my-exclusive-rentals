@@ -10,7 +10,7 @@ RewriteRule ^ https://myexclusiverentals.com%{REQUEST_URI} [L,R=301]
 # The browser keeps the requested slug in the address bar and loads that post
 # directly from Firestore, so posts published after deployment work immediately.
 RewriteRule ^blog/__article/?$ - [L]
-RewriteRule ^blog/[a-z0-9][a-z0-9-]*/?$ /blog/__article/index.html [L,NC]
+RewriteRule ^blog/[^/.]+/?$ /blog/__article/index.html [L,NC]
 
 # Use the exported Next.js error page instead of Apache's default response.
 ErrorDocument 404 /404.html
