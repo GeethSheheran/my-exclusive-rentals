@@ -6,6 +6,15 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.myexclusiverentals\.com$ [NC]
 RewriteRule ^ https://myexclusiverentals.com%{REQUEST_URI} [L,R=301]
 
+# Send every public blog article URL to the exported client-side article shell.
+# The browser keeps the requested slug in the address bar and loads that post
+# directly from Firestore, so posts published after deployment work immediately.
+RewriteRule ^blog/__article/?$ - [L]
+RewriteRule ^blog/[^/]+/?$ /blog/__article/index.html [L]
+
+# Use the exported Next.js error page instead of Apache's default response.
+ErrorDocument 404 /404.html
+
 # Gzip compression for text assets.
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
@@ -34,4 +43,3 @@ RewriteRule ^ https://myexclusiverentals.com%{REQUEST_URI} [L,R=301]
   ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
-

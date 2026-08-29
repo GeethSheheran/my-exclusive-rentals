@@ -4,7 +4,7 @@ import { VILLAS } from "@/data/villas";
 import { getPublishedPosts } from "@/lib/blog";
 import { absoluteUrl } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date("2026-03-31");

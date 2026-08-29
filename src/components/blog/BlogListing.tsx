@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { BlogImage } from "@/components/blog/BlogImage";
 import { formatBlogDate, type BlogPost } from "@/lib/blog";
@@ -24,7 +23,7 @@ function PostMeta({ post }: { post: BlogPost }) {
 function FeaturedStory({ post }: { post: BlogPost }) {
   return (
     <article className="border-y border-dark/10 py-8 md:py-12">
-      <Link
+      <a
         href={`/blog/${post.slug}/`}
         className="group grid grid-cols-1 gap-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-8 lg:grid-cols-12 lg:items-center lg:gap-16"
       >
@@ -60,7 +59,7 @@ function FeaturedStory({ post }: { post: BlogPost }) {
             />
           </span>
         </div>
-      </Link>
+      </a>
     </article>
   );
 }
@@ -68,7 +67,7 @@ function FeaturedStory({ post }: { post: BlogPost }) {
 function StoryCard({ post }: { post: BlogPost }) {
   return (
     <article className="group border-b border-dark/10 pb-10">
-      <Link
+      <a
         href={`/blog/${post.slug}/`}
         className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-8"
       >
@@ -93,7 +92,7 @@ function StoryCard({ post }: { post: BlogPost }) {
           Continue reading
           <ArrowUpRight aria-hidden="true" size={15} />
         </span>
-      </Link>
+      </a>
     </article>
   );
 }

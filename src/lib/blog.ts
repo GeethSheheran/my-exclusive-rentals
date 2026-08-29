@@ -34,10 +34,12 @@ export interface BlogPost {
 }
 
 function getBlogSiteId(): string {
-  const siteId = process.env.BLOG_SITE_ID?.trim();
+  const siteId = (
+    process.env.NEXT_PUBLIC_BLOG_SITE_ID ?? process.env.BLOG_SITE_ID
+  )?.trim();
 
   if (!siteId) {
-    throw new Error("Blog configuration is missing: BLOG_SITE_ID");
+    throw new Error("Blog configuration is missing: NEXT_PUBLIC_BLOG_SITE_ID");
   }
 
   return siteId;

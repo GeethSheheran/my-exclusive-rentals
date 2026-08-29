@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BlogListing } from "@/components/blog/BlogListing";
-import { BlogErrorState } from "@/components/blog/BlogErrorState";
-import { getBlogErrorMessage, getPublishedPosts, type BlogPost } from "@/lib/blog";
+import { BlogIndexClient } from "@/components/blog/BlogIndexClient";
 import { buildPageMetadata } from "@/lib/seo";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Blog: Sri Lanka Travel Stories and Stay Guides",
@@ -21,16 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default async function BlogPage() {
-  let posts: BlogPost[] = [];
-  let errorMessage = "";
-
-  try {
-    posts = await getPublishedPosts();
-  } catch (error) {
-    errorMessage = getBlogErrorMessage(error);
-  }
-
+export default function BlogPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-floral-white">
       <Header />
@@ -54,7 +41,7 @@ export default async function BlogPage() {
             </div>
           </div>
 
-          {errorMessage ? <BlogErrorState message={errorMessage} /> : <BlogListing posts={posts} />}
+          <BlogIndexClient />
         </div>
       </section>
 
