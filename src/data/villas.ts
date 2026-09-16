@@ -620,7 +620,7 @@ export const VILLAS: VillaData[] = [
         slug: 'hill-haven',
         name: 'Hill Haven',
         tagline: 'A colonial bungalow embraced by lush tea plantations',
-        location: 'Nuwara Eliya, Hill Country',
+        location: 'Upcot, Maskeliya',
         description: [
             'Nestled within a serene gated community of "Willows", this spectacular Colonial bungalow offers the ultimate escape. Perched amidst the lush, rolling hills of Upcot and surrounded by an expansive tea plantation, this home is a haven of tranquility and luxury.',
             'Fully equipped to meet your every need, the bungalow comes with a private chef, attentive butler and houseboy services, ensuring your stay is elevated to perfection. A full menu is available, or if you prefer, bring your own provisions and have them expertly prepared to your taste.',
@@ -767,7 +767,7 @@ export const VILLAS: VillaData[] = [
         },
         locationInfo: {
             title: 'Hill Country Retreat',
-            description: 'Nestled in the misty hills of Nuwara Eliya, Hill Haven offers a unique escape from the tropical coast. Surrounded by tea plantations and colonial heritage, experience the cool climate and stunning landscapes of Sri Lanka\'s highlands.',
+            description: 'Nestled in the misty hills of Upcot, Maskeliya, Hill Haven offers a unique escape from the tropical coast. Surrounded by tea plantations and colonial heritage, experience the cool climate and stunning landscapes of Sri Lanka\'s highlands.',
             heroImage: '/hill-haven/exterior-3.jpg',
             mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31688.4!2d80.7673!3d6.9497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTYnNTkuMCJOIDgwwrA0NicwMi4wIkU!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk',
             attractions: [

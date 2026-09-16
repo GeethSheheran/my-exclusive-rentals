@@ -41,7 +41,7 @@ export default function Home() {
       addressRegion: "Trincomalee",
       addressCountry: "LK",
     },
-    areaServed: ["Nilaveli", "Trincomalee", "Nuwara Eliya"],
+    areaServed: ["Nilaveli", "Trincomalee", "Upcot", "Maskeliya"],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
