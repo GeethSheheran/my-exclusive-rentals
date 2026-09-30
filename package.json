@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "node app.js",
+    "lint": "eslint",
+    "check:seo": "python3 scripts/verify-blog-seo.py",
+    "test:blog": "node --test scripts/blog-publishing.test.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

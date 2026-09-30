@@ -1,3 +1,4 @@
+import { cache } from "react";
 import {
   collection,
   getDocs,
@@ -8,7 +9,7 @@ import {
   where,
   type DocumentData,
   type QueryDocumentSnapshot,
-} from "firebase/firestore";
+} from "firebase/firestore/lite";
 import { getFirebaseDb } from "@/lib/firebase";
 
 export interface BlogPost {
@@ -35,11 +36,11 @@ export interface BlogPost {
 
 function getBlogSiteId(): string {
   const siteId = (
-    process.env.NEXT_PUBLIC_BLOG_SITE_ID ?? process.env.BLOG_SITE_ID
+    process.env.BLOG_SITE_ID ?? process.env.NEXT_PUBLIC_BLOG_SITE_ID
   )?.trim();
 
   if (!siteId) {
-    throw new Error("Blog configuration is missing: NEXT_PUBLIC_BLOG_SITE_ID");
+    throw new Error("Blog configuration is missing: BLOG_SITE_ID (or NEXT_PUBLIC_BLOG_SITE_ID)");
   }
 
   return siteId;
@@ -114,7 +115,9 @@ function mapBlogPost(
   };
 }
 
-export async function getPublishedPosts(): Promise<BlogPost[]> {
+// React cache deduplicates metadata/page reads within a request only. Firestore
+// Lite always reads the server, so publish/edit/unpublish is visible next request.
+export const getPublishedPosts = cache(async (): Promise<BlogPost[]> => {
   const siteId = getBlogSiteId();
   const postsQuery = query(
     collection(getFirebaseDb(), "blogPosts"),
@@ -124,42 +127,31 @@ export async function getPublishedPosts(): Promise<BlogPost[]> {
   );
 
   const snapshot = await getDocs(postsQuery);
-  return snapshot.docs.map(mapBlogPost).filter((post) => post.slug);
-}
+  const posts = snapshot.docs.map(mapBlogPost);
+  const slugs = new Set<string>();
+  for (const post of posts) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.slug)) {
+      throw new Error(`Published blog post ${post.id} has an invalid slug: ${post.slug}`);
+    }
+    if (slugs.has(post.slug)) {
+      throw new Error(`Published blog posts share the slug: ${post.slug}`);
+    }
+    slugs.add(post.slug);
+  }
+  return posts;
+});
 
-export async function getPublishedPostBySlug(
-  requestedSlug: string,
-): Promise<BlogPost | null> {
-  const siteId = getBlogSiteId();
-  const slug = requestedSlug.trim();
-  if (!slug) return null;
-
+export const getPublishedPostBySlug = cache(async (slug: string): Promise<BlogPost | null> => {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
+  // Read only the requested article, without downloading the whole archive.
   const postQuery = query(
     collection(getFirebaseDb(), "blogPosts"),
-    where("siteId", "==", siteId),
+    where("siteId", "==", getBlogSiteId()),
     where("status", "==", "published"),
     where("slug", "==", slug),
-    limit(1),
+    limit(2),
   );
-
   const snapshot = await getDocs(postQuery);
+  if (snapshot.size > 1) throw new Error(`Published blog posts share the slug: ${slug}`);
   return snapshot.empty ? null : mapBlogPost(snapshot.docs[0]);
-}
-
-export function getBlogErrorMessage(error: unknown): string {
-  const code =
-    typeof error === "object" && error !== null && "code" in error
-      ? String(error.code)
-      : "";
-  const message = error instanceof Error ? error.message : "";
-
-  if (message.includes("configuration is missing")) return message;
-  if (code.includes("permission-denied")) {
-    return "The blog is temporarily unavailable because Firestore denied access.";
-  }
-  if (code.includes("failed-precondition") || message.includes("index")) {
-    return "The blog requires a Firestore index before posts can be displayed.";
-  }
-
-  return "The blog could not be loaded right now. Please try again shortly.";
-}
+});

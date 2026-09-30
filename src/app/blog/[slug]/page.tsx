@@ -1,24 +1,33 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BlogArticleClient } from "@/components/blog/BlogArticleClient";
-import { buildPageMetadata } from "@/lib/seo";
+import { BlogArticle } from "@/components/blog/BlogArticle";
+import { getPublishedPostBySlug } from "@/lib/blog";
+import { buildBlogMetadata } from "@/lib/blog-seo";
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Travel Story",
-  description: "Travel notes, local guides, and stories from My Exclusive Rentals.",
-  path: "/blog/",
-});
+type BlogArticlePageProps = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
-  return [{ slug: "__article" }];
+// Slugs are resolved at request time, including posts published after deployment.
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPublishedPostBySlug(slug);
+  if (!post) notFound();
+
+  return buildBlogMetadata(post);
 }
 
-export default function BlogArticlePage() {
+export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
+  const { slug } = await params;
+  const post = await getPublishedPostBySlug(slug);
+  if (!post) notFound();
+
   return (
     <main className="min-h-screen overflow-x-hidden bg-floral-white">
       <Header />
-      <BlogArticleClient />
+      <BlogArticle post={post} />
       <Footer />
     </main>
   );
