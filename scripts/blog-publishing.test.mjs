@@ -1,143 +1,104 @@
-import assert from "node:assert/strict";
-import { spawn } from "node:child_process";
-import { once } from "node:events";
+import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
-import { createServer } from "node:http";
-import { setTimeout as delay } from "node:timers/promises";
-import test from "node:test";
+import { existsSync } from "node:fs";
+import { parseEnv } from "node:util";
 
-// A local Firestore REST stub, never the production database. Exercise the actual
-// built Next.js app as content changes, without rebuilding or restarting it.
-test("publish, edit, and unpublish update the blog and sitemap without a deployment", { timeout: 120_000 }, async (t) => {
-  const buildId = await readFile(".next/BUILD_ID", "utf8");
+const env = existsSync(".env.local") ? parseEnv(await readFile(".env.local", "utf8")) : {};
+const siteId = process.env.NEXT_PUBLIC_BLOG_SITE_ID || process.env.BLOG_SITE_ID || env.NEXT_PUBLIC_BLOG_SITE_ID || env.BLOG_SITE_ID;
+
+test("static export supports publish, edit, unpublish and recovery without a rebuild", async ({ page, request }) => {
+  const shellBefore = await readFile("out/blog/__article/index.html", "utf8");
+  expect(shellBefore).not.toMatch(/rel="canonical"/);
+  expect(shellBefore).not.toMatch(/name="robots" content="noindex/);
   let posts = [];
   let failReads = false;
-  let queryCount = 0;
-  const firestore = createServer(async (request, response) => {
-    try {
-      assert.match(new URL(request.url, "http://localhost").pathname, /^\/v1\/projects\/demo-blog-seo\/databases\/\(default\)\/documents:runQuery$/);
-      let body = "";
-      for await (const chunk of request) body += chunk;
-      const { structuredQuery: query } = JSON.parse(body);
-      assert.equal(query.from[0].collectionId, "blogPosts");
-      const filters = query.where.compositeFilter.filters.map(({ fieldFilter }) => fieldFilter);
-      assert(filters.some((f) => f.field.fieldPath === "siteId" && f.value.stringValue === "seo-test-site"));
-      assert(filters.some((f) => f.field.fieldPath === "status" && f.value.stringValue === "published"));
-      queryCount++;
-      response.setHeader("Content-Type", "application/json");
-      if (failReads) {
-        response.writeHead(403);
-        response.end(JSON.stringify({ error: { code: 403, status: "PERMISSION_DENIED", message: "Simulated CMS failure" } }));
-        return;
-      }
-      const result = posts.filter((post) => filters.every((f) => post[f.field.fieldPath] === f.value.stringValue));
-      response.end(JSON.stringify(result.map((post, index) => ({
-        document: {
-          name: `projects/demo-blog-seo/databases/(default)/documents/blogPosts/post-${index}`,
-          fields: Object.fromEntries(Object.entries(post).map(([key, value]) => [key, { stringValue: value }])),
-          createTime: "2026-09-01T00:00:00Z",
-          updateTime: "2026-09-30T00:00:00Z",
-        },
-      }))));
-    } catch (error) {
-      response.writeHead(400);
-      response.end(JSON.stringify({ error: { code: 400, status: "INVALID_ARGUMENT", message: String(error) } }));
+  const pageErrors = [];
+  page.on("pageerror", (error) => pageErrors.push(error.message));
+  // Accelerate only the blog refresh interval; keep animation clocks untouched.
+  await page.addInitScript(() => {
+    const schedule = window.setInterval.bind(window);
+    window.setInterval = (handler, timeout, ...args) => schedule(handler, timeout === 60000 ? 1000 : timeout, ...args);
+  });
+  // Intercept only read requests. No production database changes are made.
+  await page.route("https://firestore.googleapis.com/**", async (route) => {
+    expect(route.request().url()).toContain("documents:runQuery");
+    const query = route.request().postDataJSON().structuredQuery;
+    const filters = query.where.compositeFilter.filters.map(({ fieldFilter }) => fieldFilter);
+    expect(filters).toEqual(expect.arrayContaining([
+      expect.objectContaining({ field: { fieldPath: "siteId" }, value: { stringValue: siteId } }),
+      expect.objectContaining({ field: { fieldPath: "status" }, value: { stringValue: "published" } }),
+    ]));
+    if (failReads) {
+      await route.fulfill({ status: 403, contentType: "application/json", body: JSON.stringify({ error: { code: 403, status: "PERMISSION_DENIED", message: "Test outage" } }) });
+      return;
     }
+    const matches = posts.filter((post) => filters.every((filter) => post[filter.field.fieldPath] === filter.value.stringValue));
+    const documentRoot = new URL(route.request().url()).pathname.replace(/^\/v1\//, "").replace(/:runQuery$/, "");
+    await route.fulfill({ contentType: "application/json", body: JSON.stringify(matches.map((post, index) => ({ document: {
+      name: `${documentRoot}/blogPosts/post-${index}`,
+      fields: Object.fromEntries(Object.entries(post).map(([key, value]) => [key, { stringValue: value }])),
+      createTime: "2026-10-01T00:00:00Z", updateTime: "2026-10-01T00:00:00Z",
+    } }))) });
   });
-  firestore.listen(0, "127.0.0.1");
-  await once(firestore, "listening");
-  t.after(() => firestore.close());
-
-  const portReservation = createServer();
-  portReservation.listen(0, "127.0.0.1");
-  await once(portReservation, "listening");
-  const appPort = portReservation.address().port;
-  await new Promise((resolve) => portReservation.close(resolve));
-  const app = spawn(process.execPath, ["app.js"], {
-    env: {
-      ...process.env,
-      NODE_ENV: "production",
-      PORT: String(appPort),
-      APP_HOST: "127.0.0.1",
-      FIREBASE_API_KEY: "fake-api-key",
-      FIREBASE_PROJECT_ID: "demo-blog-seo",
-      FIREBASE_APP_ID: "fake-app-id",
-      BLOG_SITE_ID: "seo-test-site",
-      FIRESTORE_EMULATOR_HOST: `127.0.0.1:${firestore.address().port}`,
-    },
-    stdio: ["ignore", "pipe", "pipe"],
-  });
-  let logs = "";
-  app.stdout.on("data", (data) => { logs += data; });
-  app.stderr.on("data", (data) => { logs += data; });
-  t.after(async () => {
-    if (app.exitCode === null) {
-      app.kill("SIGTERM");
-      await once(app, "exit");
-    }
-  });
-  const base = `http://127.0.0.1:${appPort}`;
-  const request = async (path) => {
-    const response = await fetch(base + path, { signal: AbortSignal.timeout(15_000) });
-    return { status: response.status, headers: response.headers, html: await response.text() };
-  };
-  let ready = false;
-  for (let attempt = 0; attempt < 80; attempt++) {
-    assert.equal(app.exitCode, null, logs);
-    try {
-      const response = await request("/robots.txt");
-      if (response.status === 200) { ready = true; break; }
-    } catch { /* Wait for the server to bind its port. */ }
-    await delay(250);
-  }
-  assert(ready, logs);
-  const slug = "published-after-server-start";
+  const slug = "newly-published-after-build";
   const path = `/blog/${slug}/`;
-  const body = "This article was published after the application started. ".repeat(25);
-  const missing = await request(path);
-  assert.equal(missing.status, 404, `An unknown post must be a real 404\n${logs}`);
+  const response = await page.goto(path);
+  expect(response.status()).toBe(200);
+  await expect(page.getByRole("heading", { name: "Story not found" })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex, follow");
 
-  posts = [{ siteId: "seo-test-site", status: "published", slug, title: "New coast guide", content: body, excerpt: "A fresh travel guide.", publishedAt: "2026-09-30T00:00:00Z" },
-    { siteId: "another-site", status: "published", slug: "private-other-site", title: "Other site" },
-    { siteId: "seo-test-site", status: "draft", slug: "private-draft", title: "Unpublished draft" }];
-  const article = await request(path);
-  assert.equal(article.status, 200, logs);
-  assert.match(article.headers.get("cache-control"), /no-store/);
-  assert.match(article.html, /<h1[^>]*>New coast guide<\/h1>/);
-  assert(article.html.includes(body.trim()));
-  const head = article.html.split("</head>")[0];
-  assert(head.includes("New coast guide | My Exclusive Rentals"));
-  assert(head.includes(`rel="canonical" href="https://myexclusiverentals.com${path}"`));
-  assert(article.html.includes('"@type":"BlogPosting"'));
-  let listing = await request("/blog/");
-  assert(listing.html.includes(`href="${path}"`));
-  assert(!listing.html.includes("private-other-site") && !listing.html.includes("private-draft"));
-  let sitemap = await request("/sitemap.xml");
-  assert.equal(sitemap.status, 200);
-  assert.match(sitemap.headers.get("cache-control"), /max-age=0/);
-  assert.match(sitemap.headers.get("cache-control"), /must-revalidate/);
-  assert(sitemap.html.includes(`https://myexclusiverentals.com${path}`));
+  posts = [{ siteId, status: "published", slug, title: "New coast guide", seoTitle: "Sri Lanka coast guide", metaDescription: "Local discoveries along the coast.", content: "A newly published story loaded directly from Firebase.", excerpt: "Explore the coastline.", publishedAt: "2026-10-01T00:00:00Z", canonicalUrl: "https://myexclusiverentals.com/blog/" },
+    { siteId, status: "draft", slug: "private-draft", title: "Private draft" },
+    { siteId: "another-site", status: "published", slug: "other-site", title: "Other website" }];
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.getByRole("heading", { name: "New coast guide", exact: true })).toBeVisible();
+  await expect(page).toHaveTitle("Sri Lanka coast guide | My Exclusive Rentals");
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://myexclusiverentals.com${path}`);
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", posts[0].metaDescription);
+  await expect(page.locator('meta[property="og:type"]')).toHaveAttribute("content", "article");
+  expect(JSON.parse(await page.locator('article script[type="application/ld+json"]').textContent())["@type"]).toBe("BlogPosting");
 
   posts[0].title = "Updated coast guide";
-  posts[0].content = "Updated article content from the dashboard.";
-  const edited = await request(path);
-  assert.equal(edited.status, 200);
-  assert.match(edited.html, /<h1[^>]*>Updated coast guide<\/h1>/);
-  assert(edited.html.includes(posts[0].content));
+  posts[0].seoTitle = "Updated coast guide SEO";
+  posts[0].content = 'Edited safely: </script><script>window.unwantedScript = true</script>';
+  await expect(page.getByRole("heading", { name: "Updated coast guide", exact: true })).toBeVisible();
+  await expect(page).toHaveTitle("Updated coast guide SEO | My Exclusive Rentals");
+  expect(await page.evaluate(() => window.unwantedScript)).toBeUndefined();
+
+  await page.getByRole("link", { name: "Back to Blog", exact: true }).click();
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://myexclusiverentals.com/blog/");
+  const articleLink = page.locator(`a[href="${path}"]`);
+  await expect(articleLink).toHaveCount(1);
+  await expect(page.getByText("Private draft", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("Other website", { exact: true })).toHaveCount(0);
+  await articleLink.click();
+  await expect(page.getByRole("heading", { name: "Updated coast guide", exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole("heading", { name: "Updated coast guide", exact: true })).toBeVisible();
 
   posts[0].status = "draft";
-  const unpublished = await request(path);
-  assert.equal(unpublished.status, 404);
-  assert.match(unpublished.html, /name="robots" content="noindex/);
-  listing = await request("/blog/");
-  sitemap = await request("/sitemap.xml");
-  assert(!listing.html.includes(`href="${path}"`));
-  assert(!sitemap.html.includes(`https://myexclusiverentals.com${path}`));
-  assert.equal((await request("/blog/__article/")).status, 404);
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.getByRole("heading", { name: "Story not found" })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex, follow");
+  await expect(page.locator('article script[type="application/ld+json"]')).toHaveCount(0);
+  await page.goto("/blog/");
+  await expect(page.getByRole("heading", { name: "Stories are on their way" })).toBeVisible();
+  await expect(page.locator(`a[href="${path}"]`)).toHaveCount(0);
 
   failReads = true;
-  assert.equal((await request("/sitemap.xml")).status, 500, "CMS failure must not publish an empty sitemap");
-  assert.equal((await request(path)).status, 500, "CMS failure must not be cached as an article 404");
-  assert.equal(await readFile(".next/BUILD_ID", "utf8"), buildId);
-  assert(queryCount >= 10, "Requests must fetch current CMS data");
+  await page.goto(path);
+  await expect(page.getByRole("alert").filter({ hasText: "couldn’t load" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Story not found" })).toHaveCount(0);
+  await expect(page.locator('[class*="z-[100]"]')).toHaveCount(0);
+  failReads = false;
+  posts[0].status = "published";
+  await page.getByRole("button", { name: "Try again" }).click();
+  await expect(page.getByRole("heading", { name: "Updated coast guide", exact: true })).toBeVisible();
+  expect(pageErrors).toEqual([]);
+  expect(await readFile("out/blog/__article/index.html", "utf8")).toBe(shellBefore);
+  expect((await request.get("/blog/__article/")).status()).toBe(404);
+  expect((await request.get("/unrelated-missing-page/")).status()).toBe(404);
 });

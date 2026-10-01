@@ -69,3 +69,6 @@ temp/
 
 # Cache
 .cache
+# Browser test artifacts
+/test-results/
+/playwright-report/

@@ -1,33 +1,24 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BlogArticle } from "@/components/blog/BlogArticle";
-import { getPublishedPostBySlug } from "@/lib/blog";
-import { buildBlogMetadata } from "@/lib/blog-seo";
+import { BlogArticleClient } from "@/components/blog/BlogArticleClient";
 
-type BlogArticlePageProps = { params: Promise<{ slug: string }> };
+// One exported shell serves every article via Apache. No canonical or noindex
+// here: public article URLs receive their own metadata after Firebase loads.
+export const metadata: Metadata = {
+  title: "Travel story",
+  description: "Travel stories and local guides from My Exclusive Rentals.",
+};
 
-// Slugs are resolved at request time, including posts published after deployment.
-export const dynamic = "force-dynamic";
-
-export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPublishedPostBySlug(slug);
-  if (!post) notFound();
-
-  return buildBlogMetadata(post);
+export function generateStaticParams() {
+  return [{ slug: "__article" }];
 }
 
-export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
-  const { slug } = await params;
-  const post = await getPublishedPostBySlug(slug);
-  if (!post) notFound();
-
+export default function BlogArticlePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-floral-white">
       <Header />
-      <BlogArticle post={post} />
+      <BlogArticleClient />
       <Footer />
     </main>
   );

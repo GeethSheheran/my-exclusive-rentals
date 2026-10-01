@@ -4,11 +4,11 @@ import { VILLAS } from "@/data/villas";
 import { getPublishedPosts } from "@/lib/blog";
 import { absoluteUrl } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Read current publications on every request, including newly added slugs.
-  // A CMS outage must not return a successful but incomplete sitemap.
+  // Static hosting: capture currently published URLs at build time. New posts
+  // are discoverable through the live listing without waiting for another build.
   const posts = await getPublishedPosts();
   const latestPostUpdate = posts
     .map((post) => post.updatedAt || post.publishedAt)

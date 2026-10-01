@@ -1,4 +1,3 @@
-import { cache } from "react";
 import {
   collection,
   getDocs,
@@ -36,7 +35,7 @@ export interface BlogPost {
 
 function getBlogSiteId(): string {
   const siteId = (
-    process.env.BLOG_SITE_ID ?? process.env.NEXT_PUBLIC_BLOG_SITE_ID
+    process.env.NEXT_PUBLIC_BLOG_SITE_ID ?? process.env.BLOG_SITE_ID
   )?.trim();
 
   if (!siteId) {
@@ -115,9 +114,8 @@ function mapBlogPost(
   };
 }
 
-// React cache deduplicates metadata/page reads within a request only. Firestore
-// Lite always reads the server, so publish/edit/unpublish is visible next request.
-export const getPublishedPosts = cache(async (): Promise<BlogPost[]> => {
+// Firestore Lite reads current server data without an offline result cache.
+export async function getPublishedPosts(): Promise<BlogPost[]> {
   const siteId = getBlogSiteId();
   const postsQuery = query(
     collection(getFirebaseDb(), "blogPosts"),
@@ -130,7 +128,7 @@ export const getPublishedPosts = cache(async (): Promise<BlogPost[]> => {
   const posts = snapshot.docs.map(mapBlogPost);
   const slugs = new Set<string>();
   for (const post of posts) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.slug)) {
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(post.slug)) {
       throw new Error(`Published blog post ${post.id} has an invalid slug: ${post.slug}`);
     }
     if (slugs.has(post.slug)) {
@@ -139,10 +137,10 @@ export const getPublishedPosts = cache(async (): Promise<BlogPost[]> => {
     slugs.add(post.slug);
   }
   return posts;
-});
+}
 
-export const getPublishedPostBySlug = cache(async (slug: string): Promise<BlogPost | null> => {
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
+export async function getPublishedPostBySlug(slug: string): Promise<BlogPost | null> {
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) return null;
   // Read only the requested article, without downloading the whole archive.
   const postQuery = query(
     collection(getFirebaseDb(), "blogPosts"),
@@ -154,4 +152,4 @@ export const getPublishedPostBySlug = cache(async (slug: string): Promise<BlogPo
   const snapshot = await getDocs(postQuery);
   if (snapshot.size > 1) throw new Error(`Published blog posts share the slug: ${slug}`);
   return snapshot.empty ? null : mapBlogPost(snapshot.docs[0]);
-});
+}

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BlogListing } from "@/components/blog/BlogListing";
+import { BlogIndexClient } from "@/components/blog/BlogIndexClient";
 import { getPublishedPosts } from "@/lib/blog";
 import { buildPageMetadata } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Blog: Sri Lanka Travel Stories and Stay Guides",
@@ -46,7 +46,7 @@ export default async function BlogPage() {
             </div>
           </div>
 
-          <BlogListing posts={posts} />
+          <BlogIndexClient initialPosts={posts} />
         </div>
       </section>
 
