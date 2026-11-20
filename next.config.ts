@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
 const nextConfig: NextConfig = {
-  output: "export",
   trailingSlash: true,
   env: {
     NEXT_PUBLIC_FIREBASE_API_KEY:
@@ -35,4 +35,10 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default function config(phase: string): NextConfig {
+  // cPanel handles article rewrites for the export. Local development resolves slugs directly.
+  return {
+    ...nextConfig,
+    output: phase === PHASE_DEVELOPMENT_SERVER ? undefined : "export",
+  };
+}
