@@ -1,7 +1,7 @@
 # My Exclusive Rentals
 
-Next.js site exported to `out/` for Apache/cPanel. Production needs no Node.js
-process and no PHP. All articles use one shared source template.
+Next.js site exported to `out/` for Apache/cPanel. PHP can render blog articles
+and the sitemap on cPanel. The Next.js export runs without a Node.js process.
 
 ## Publishing from the dashboard
 
@@ -12,9 +12,9 @@ file upload, deployment, or restart is needed.**
 
 The blog listing includes a build-time snapshot for initial discovery, then
 replaces it with current published Firebase posts. Each article loads its current
-content from Firebase in the browser. Apache rewrites public article URLs to the
-shared `blog/__article/index.html` shell, including slugs created after deployment.
-There are no individual article source files.
+content from Firebase on each request. PHP inserts the article into the exported
+Next.js shell. The existing browser refreshes continue to pick up edits and
+unpublishing for open tabs.
 
 ## Build and deploy (one time for this fix, then for code/design changes)
 
@@ -50,41 +50,48 @@ other unrelated directives when merging the supplied Apache rules.
 
 The new article rule takes precedence over old exported article directories.
 Upload the new assets and shell before switching `.htaccess` and the blog listing.
-Do not upload `.next/`, source files, `.env.local`, or `node_modules`. No new server
-process or cPanel application setup is needed. `npm start` is only a **local
-static preview** with equivalent routing; it is not a production requirement.
+Do not upload `.next/`, source files, `.env.local`, or `node_modules`. The site
+needs no Node.js process in production. `npm start` previews the static export
+and the browser publishing flow locally.
+
+On cPanel, select PHP 8.1 or later with cURL, DOM and mbstring enabled. After
+uploading the export, create `my-exclusive-rentals-blog.php` **one directory
+above the document root** (for `public_html`, this is the account home directory).
+Use the same project and site IDs as in the Next.js build:
+
+```php
+<?php
+return [
+    'projectId' => 'your-project-id',
+    'siteId' => 'your-site-id',
+];
+```
+
+Apache enables the PHP routes when this file exists. PHP uses the same public
+Firestore read rules and needs outbound HTTPS access to
+`firestore.googleapis.com`. Remove the config file to restore the browser-only
+article route and the exported sitemap while investigating a server error.
 
 After deployment, open a newly published slug directly and refresh it. Confirm
 its content, title, and canonical load. Do not enable stale HTML caching on the
 blog or the shared shell. Firebase calls fetch current server data.
 
-## SEO behavior and limits
+## SEO behavior
 
-- Published article URLs return HTTP 200 and load automatically without login or
-  interaction. The browser sets a unique title, description, canonical, Open
-  Graph tags, and BlogPosting structured data.
-- The shell deliberately has no initial canonical and no initial `noindex`, so
-  crawlers can render it without conflicting URL signals.
-- A confirmed missing/unpublished article shows “Story not found” and adds
-  `noindex` after the Firebase lookup. Static hosting cannot return a
-  database-dependent HTTP 404; unrelated invalid URLs still return a real 404.
-- Temporary Firebase failures show a retry message, rather than claiming the
-  article is missing. A listing can retain its last available snapshot during an
-  outage; an article already open retains its last loaded content.
-- **`sitemap.xml` remains a build-time snapshot.** It includes articles published
-  at the last build. New articles are discoverable through live `<a href>` links
-  on `/blog/` without another deployment. Robots.txt points to this sitemap.
-- Google can render JavaScript, but indexing can be delayed or fail if rendering
-  or Firebase requests fail. Bots that do not run JavaScript will not see article
-  content/metadata; social link previews may remain generic. This is client-side
-  SEO, not server rendering. See
-  [Google's JavaScript SEO guidance](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics).
+- PHP serves the article, title, description, canonical, and structured data in
+  the first response at the existing URL. A confirmed missing or unpublished
+  slug returns HTTP 404. A Firestore error returns HTTP 503.
+- PHP refreshes the article URLs in `/sitemap.xml` from Firestore on request and
+  keeps the non-blog URLs from the exported sitemap.
+- After enabling the PHP routes, publish a test post and confirm that its URL
+  works with JavaScript disabled, appears in `/sitemap.xml`, and returns HTTP 404
+  after unpublishing. Check the HTML with Search Console URL Inspection.
 
 ## Verification
 
 `npm run check:seo` uses Python 3 to check initial listing links, sitemap coverage,
 robots.txt, the shared shell's indexing signals, and the exported Apache file.
-`npm run test:blog` uses Playwright against the unchanged static export, intercepts
+`npm run test:blog` uses Playwright against the static export, intercepts
 Firestore reads with test data, and checks publish/edit/unpublish, new-URL refresh,
 metadata, draft/site filtering, and retry behavior. It makes no database writes.
 

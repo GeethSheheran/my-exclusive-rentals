@@ -39,3 +39,9 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+#server-blog-content:empty,
+#server-blog-content:not([hidden]):not(:empty) + .client-blog-content,
+body:has(#server-blog-content) [data-site-splash] {
+  display: none;
+}

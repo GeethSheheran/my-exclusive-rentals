@@ -1,5 +1,4 @@
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
 import { BlogImage } from "@/components/blog/BlogImage";
 import { ArticleMeta } from "@/components/blog/ArticleMeta";
 import type { BlogPost } from "@/lib/blog";
@@ -15,13 +14,14 @@ export function BlogArticle({ post }: { post: BlogPost }) {
   return (
     <article className="px-4 pb-24 pt-40 md:pb-32 md:pt-52">
       <div className="container mx-auto max-w-7xl">
-        <Link
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- Reload the listing head after the Apache article rewrite. */}
+        <a
           href="/blog/"
           className="mb-12 inline-flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-dark/50 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4"
         >
           <ArrowLeft aria-hidden="true" size={16} />
           Back to Blog
-        </Link>
+        </a>
 
         <header className="mx-auto max-w-6xl text-left">
           <h1 className="break-words font-serif text-4xl leading-[1.02] text-dark md:text-6xl lg:text-7xl">

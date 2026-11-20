@@ -17,6 +17,10 @@ RewriteRule ^blog/__article(?:/.*)?$ - [R=404,L]
 RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/index\.html$ /blog/$1/ [R=301,L]
 RewriteRule ^blog/([a-z0-9][a-z0-9-]*)$ /blog/$1/ [R=301,L]
 
+# Enable server-rendered articles and a live sitemap once the cPanel config is installed.
+RewriteCond %{DOCUMENT_ROOT}/../my-exclusive-rentals-blog.php -f
+RewriteRule ^(?:blog/[a-z0-9][a-z0-9-]*/|sitemap\.xml)$ blog-render.php [END]
+
 # Always use the live Firebase template, even if an old article directory exists.
 # END prevents the internal shell request from going through these rules again.
 RewriteRule ^blog/[a-z0-9][a-z0-9-]*/$ blog/__article/index.html [END]

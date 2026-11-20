@@ -21,6 +21,7 @@ export function SplashScreen() {
             {isVisible && (
                 <motion.div
                     key="splash-screen"
+                    data-site-splash
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
